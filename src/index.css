@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f2f2fc !important;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: 'SegoeBold';
+  src: local('SegoeBold'), url(./utils/fonts/SegoeBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe UI Regular'),
+    url(./utils/fonts/Segoe.ttf) format('truetype');
+}
+
+.loadingHeader {
+  display: flex;
+  background-color: white;
+  box-shadow: 0 3px 6px rgb(0, 0, 0, 0.3);
+  width: -webkit-fill-available;
+}

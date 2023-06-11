@@ -1,0 +1,193 @@
+.Modal {
+  left: 50%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  transform: translate(-50%, 0);
+  height: auto;
+  background: rgb(0, 0, 0, 0.4);
+  width: 100%;
+  padding: 170px 0 200px 0;
+}
+
+.modalContainer {
+  display: block;
+  background: #fff;
+  border-radius: 20px;
+  width: 1150px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.closeModalBtn {
+  position: absolute;
+  display: block;
+  top: 13%;
+  width: 30px;
+  right: 3%;
+}
+
+.closeModalBtn div {
+  border-top: 4px solid #fff;
+  padding: 5px;
+  transition: all 0.3s;
+}
+
+.closeModalBtn:hover .upper {
+  transform: rotate(-45deg);
+  padding: 0;
+  border-radius: 5px;
+}
+
+.closeModalBtn:hover .lower {
+  transform: rotate(45deg);
+  padding: 0;
+  border-radius: 5px;
+}
+
+.modalHeads {
+  display: flex;
+  justify-content: center;
+}
+
+.eventHead {
+  font-family: SegoeBold;
+  font-size: 30px;
+  color: #2f2d64;
+  margin: 0 25px;
+}
+
+.uploadBtn {
+  display: flex;
+  align-items: center;
+  margin: 0 25px;
+  position: relative;
+}
+
+.uploadBtn label.btnLabel {
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0;
+  color: #fff;
+  background: #2f2d64;
+  padding: 7px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: 0 3px 6px rgb(0, 0, 0, 0.4);
+}
+
+.uploadBtn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 80px;
+  overflow: hidden;
+}
+
+.eventInfo {
+  display: flex;
+  margin: 10px 20px;
+}
+
+.eventIcons {
+  height: 20px;
+  margin: 0 4px;
+}
+
+.modalTabs {
+  position: relative;
+  padding: 0;
+  margin: 30px 0 0 0;
+  list-style: none;
+  justify-content: center;
+  border-bottom: 1px solid #2f2d64;
+}
+
+.modalTabs li {
+  display: inline-flex;
+  margin: 5px 15px;
+}
+
+.modalTabs li .tabImg {
+  height: 25px;
+}
+
+.modalTabs img.tabSlider {
+  position: absolute;
+  bottom: -3px;
+  width: 105px;
+  height: 5px;
+  transition: all 0.3s;
+}
+
+.modalTabs img.tabSlider.Left {
+  left: 21%;
+}
+
+.modalTabs img.tabSlider.Center {
+  left: 38%;
+}
+
+.modalTabs img.tabSlider.Right {
+  left: 60%;
+}
+
+p.Head,
+p.infoName {
+  margin: 0 5px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2f2d64;
+}
+
+p.Head {
+  font-family: SegoeBold;
+}
+
+p.infoName {
+  font-family: Segoe UI;
+}
+
+.galleryContainer {
+  position: relative;
+  height: 65vh;
+  overflow: auto;
+  margin: 10px 0;
+}
+
+.galleryContainer::-webkit-scrollbar {
+  display: block;
+  width: 7px;
+  transition: all 0.2s;
+}
+
+.galleryContainer::-webkit-scrollbar-thumb {
+  background-color: #2f2d64;
+  border-radius: 50px;
+}
+
+.gallery {
+  display: inline-block;
+  position: relative;
+  background: gainsboro;
+  margin: 15px 0px;
+}
+
+.hoverLay {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: -webkit-fill-available;
+  width: 100%;
+  background: rgb(0, 0, 0, 0.4);
+  transition: all 0.3s;
+  bottom: 1%;
+  z-index: 1000;
+}
+
+.gallery:hover .hoverLay {
+  opacity: 1;
+}

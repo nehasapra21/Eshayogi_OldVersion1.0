@@ -1,0 +1,18 @@
+h1.maintainanceHeader {
+  color: #2f2d64;
+  font-family: SegoeBold;
+  font-size: 60px;
+}
+
+h2.maintainanceSubHeader {
+  color: #2f2d64;
+  font-family: SegoeBold;
+  font-size: 30px;
+}
+
+p.maintainancePara {
+  color: #2f2d64;
+  font-size: 24px;
+  font-family: Segoe UI;
+  font-weight: 400;
+}

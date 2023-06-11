@@ -1,0 +1,249 @@
+
+.SelectedTab{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px 0px 0px 0px;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    cursor: pointer;
+}
+.SelectTab{
+    background: #2F2D64 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px 0px 0px 0px;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    cursor: pointer;
+}
+.SelectedTabLeft{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 0px 15px 0px 0px;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    cursor: pointer;
+}
+.SelectTabLeft{
+    background: #2F2D64 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 0px 15px 0px 0px;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    cursor: pointer;
+}
+.TabLayout{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    height: 65px;
+    border-radius: 15px 15px 0px 0px;
+}
+.TabIcon{
+
+    width: 30px;
+    align-self: center;
+    margin-right: 10px;
+}
+.SelectedTabText{
+    font-size: 17px;
+    font-family: Segoe UI;
+    font-weight: 700;
+    align-self: center;
+    color: #fff;
+    margin-bottom: 0px;
+}
+.SelectTabText{
+    font-size: 18px;
+    font-family: Segoe UI;
+    font-weight: 700;;
+    align-self: center;
+    color:#2F2D64;;
+    margin-bottom: 0px;
+}
+.MPLADRequestLayout{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    width:200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    opacity: 0.5;
+    pointer-events: none;
+    border: 1px solid red;
+}
+.RequestLayout{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    width:200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.SelectedRequestTxt{
+    font-size: 18px;
+    font-family: SegoeBold;
+    text-align: center;
+    color: #2F2D64;
+    margin-top: 20px;
+}
+.RequestRadioTxt{
+    font-size: 18px;
+    font-family: Segoe UI;
+    font-weight: 500;
+    text-align: center;
+    color: #2F2D64;
+    margin-top: 20px;
+}
+.RequestImg{
+    width: 64px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Requestdiv{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.radiobuttonrequest {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 55px;
+    padding-top: 35px;
+    margin-left: 67px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: normal;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .uncheckedrequest {
+    position: absolute;
+    left: 17px;
+    height: 28px;
+    width: 28px;
+    border: 2px solid #2f2d64;
+    border-radius: 50%;
+  }
+  
+  .checkedrequest {
+    position: absolute;
+    left: 17px;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    border: 2px solid #2f2d64;
+  }
+  
+  .checkedrequest:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #2f2d64;
+    border-radius: 50px;
+    left: 12.5%;
+    top: 13.5%;
+  }
+  
+  .radiobuttonrequest .checked:after {
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
+    right: 15%;
+    bottom: 15%;
+    border-radius: 50%;
+    background: #fff;
+  }
+  .TxtInputFrameOTP{
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.ResendOTP{
+    cursor: pointer;
+    font-weight: 600;
+    font-family: Segoe UI;
+    font-size: 11px;
+    color:red
+}
+.OTPSent{
+    font-weight: 600;
+    font-family: Segoe UI;
+    font-size: 11px;
+    color:#198A44;
+    margin-left: 300px;
+}
+.NULL{
+    display:none
+}
+
+.InvalidOTP{
+    font-weight: 600;
+    font-family: Segoe UI;
+    font-size: 11px;
+    color:red;
+    text-align: left;
+    margin-top: -30px;
+    
+}
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+  
+@media screen and (max-width: 480px){
+    .FormFrame{
+        
+        padding-left: 15px;
+        padding-right: 15px;
+        background: rbga(255,255,255,0.6);
+        
+    }
+    .FormOuterFrame{
+        width:90%;
+        color:#fff;
+        background: rgba(255,255,255,0.6);
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px 15px 0px 0px;
+    }
+} 
+
+/* Utility css */
+
+.margLeft {
+    margin-left: 50px;
+}
+
+.margRight {
+    margin-right: 50px;
+}

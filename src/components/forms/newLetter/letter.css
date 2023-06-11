@@ -1,0 +1,291 @@
+.letterHeader {
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+.fields {
+  display: flex;
+}
+
+p.field {
+  font-family: Segoe UI;
+  font-size: 14px;
+  color: #222f3e;
+  margin: 0;
+}
+
+p.value {
+  text-decoration: underline;
+  color: #222f3e;
+  font-family: Segoe UI;
+  font-size: 14px;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.buttons .BtnSubmit {
+  margin: 2px 5px;
+  width: 100px;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.headFields {
+  display: flex;
+  min-width: 190px;
+  max-width: -webkit-fill-available;
+  align-self: center;
+  margin: 0 10px;
+}
+
+.tox .tox-editor-container {
+  background-color: #e6e6ee;
+}
+
+.tox .tox-sidebar-wrap {
+  width: 75%;
+  margin: 70px auto;
+}
+
+.tox .tox-edit-area {
+  box-shadow: 0 0px 5px rgb(0, 0, 0, 0.3);
+}
+
+.tox .tox-notification {
+  display: none !important;
+}
+
+.tox .tox-notification--in {
+  opacity: 0 !important;
+}
+
+.tox
+  .tox-edit-area
+  iframe.tox
+  .tox-edit-area__iframe
+  > html
+  > body
+  > div.letterTemplate {
+  height: -webkit-fill-available;
+}
+
+.tox
+  .tox-edit-area
+  iframe.tox
+  .tox-edit-area__iframe
+  > html
+  > body
+  > div.letterTemplate
+  img.letterHead,
+.tox
+  .tox-edit-area
+  iframe.tox
+  .tox-edit-area__iframe
+  > html
+  > body
+  > div.letterTemplate
+  img.letterBottom {
+  width: 100%;
+}
+
+.tox .letterHead {
+  width: 100%;
+}
+
+.tox
+  .tox-collection--list
+  .tox-collection__group
+  div[title='New document'].tox-menu-nav__js.tox-collection__item {
+  display: none !important;
+}
+
+.tox
+  .tox-collection--list
+  .tox-collection__group
+  div[title='Preview'].tox-menu-nav__js.tox-collection__item {
+  display: none !important;
+}
+
+@font-face {
+  font-family: 'Kruti Dev 016';
+  src: url('https://sanjaybhatia.esahyogi.com/font/demo.html')
+    format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+iframe#tiny-react_80605859251612166264309_ifr {
+  padding: 70px 30px;
+}
+
+.tox-toolbar__group button.tox-tbtn,
+.tox-toolbar__group div.tox-split-button {
+  position: relative;
+  overflow: visible;
+}
+
+.tox-toolbar__group button.tox-tbtn:hover:before,
+.tox-toolbar__group div.tox-split-button:hover:before {
+  border: solid;
+  border-color: #333 transparent;
+  border-width: 0 6px 6px 6px;
+  content: '';
+  position: absolute;
+  z-index: 99;
+  top: 83%;
+}
+
+.tox-toolbar__group div.tox-split-button:hover:before {
+  left: 20% !important;
+}
+
+.tox-toolbar__group button.tox-tbtn:hover:after,
+.tox-toolbar__group div.tox-split-button:hover:after {
+  background: #333;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  content: attr(title);
+  padding: 2px 7px;
+  position: absolute;
+  z-index: 9000;
+  width: max-content;
+  color: #fff;
+  top: 100%;
+}
+
+.tox .tox-pop__dialog {
+  overflow: visible !important;
+}
+
+.padCard {
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgb(0, 0, 0, 0.3);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+  padding: 40px;
+}
+
+.tox-form {
+  display: block !important;
+}
+
+.tox-form__group {
+  width: 40% !important;
+  display: inline-block !important;
+  margin: 20px !important;
+}
+
+.tox-form__group > input {
+  border: none !important;
+  border-bottom: 1px solid #ccc !important;
+  border-radius: 0 !important;
+}
+
+.tox-form__group > input:focus {
+  border-color: #207ab7 !important;
+}
+
+.closeBtn button {
+  width: 120px;
+  border: none;
+  background: #2f2d64;
+  color: #fff;
+  padding: 5px 0;
+  border-radius: 6px;
+}
+
+.tox-collection__item[title='ब्'] .tox-collection__item-icon,
+.tox-collection__item[title='म्'] .tox-collection__item-icon,
+.tox-collection__item[title='थ्'] .tox-collection__item-icon,
+.tox-collection__item[title='ळ'] .tox-collection__item-icon,
+.tox-collection__item[title='भ्'] .tox-collection__item-icon,
+.tox-collection__item[title='प्'] .tox-collection__item-icon,
+.tox-collection__item[title='श्र'] .tox-collection__item-icon,
+.tox-collection__item[title='ज्ञ'] .tox-collection__item-icon,
+.tox-collection__item[title='स्'] .tox-collection__item-icon,
+.tox-collection__item[title='व्'] .tox-collection__item-icon,
+.tox-collection__item[title='च्'] .tox-collection__item-icon,
+.tox-collection__item[title='ब्'] .tox-collection__item-icon,
+.tox-collection__item[title='त्'] .tox-collection__item-icon,
+.tox-collection__item[title='ज्'] .tox-collection__item-icon,
+.tox-collection__item[title='न्'] .tox-collection__item-icon,
+.tox-collection__item[title='ग्'] .tox-collection__item-icon,
+.tox-collection__item[title='ल्'] .tox-collection__item-icon,
+.tox-collection__item[title='र्'] .tox-collection__item-icon,
+.tox-collection__item[title='ख्'] .tox-collection__item-icon,
+.tox-collection__item[title='ऋ'] .tox-collection__item-icon,
+.tox-collection__item[title='क्ष्'] .tox-collection__item-icon,
+.tox-collection__item[title='्'] .tox-collection__item-icon,
+.tox-collection__item[title='ं'] .tox-collection__item-icon,
+.tox-collection__item[title='ि'] .tox-collection__item-icon,
+.tox-collection__item[title='ी'] .tox-collection__item-icon,
+.tox-collection__item[title='ृ'] .tox-collection__item-icon,
+.tox-collection__item[title='ा'] .tox-collection__item-icon,
+.tox-collection__item[title='ु'] .tox-collection__item-icon,
+.tox-collection__item[title='ू'] .tox-collection__item-icon,
+.tox-collection__item[title='े'] .tox-collection__item-icon,
+.tox-collection__item[title='ॅ'] .tox-collection__item-icon,
+.tox-collection__item[title='ै'] .tox-collection__item-icon,
+.tox-collection__item[title='ौ'] .tox-collection__item-icon,
+.tox-collection__item[title=','] .tox-collection__item-icon,
+.tox-collection__item[title="'"] .tox-collection__item-icon,
+.tox-collection__item[title='?'] .tox-collection__item-icon,
+.tox-collection__item[title='('] .tox-collection__item-icon,
+.tox-collection__item[title=')'] .tox-collection__item-icon {
+  display: none !important;
+}
+
+.tox-collection__item[title='ब्']::after,
+.tox-collection__item[title='म्']::after,
+.tox-collection__item[title='थ्']::after,
+.tox-collection__item[title='ळ']::after,
+.tox-collection__item[title='भ्']::after,
+.tox-collection__item[title='प्']::after,
+.tox-collection__item[title='श्र']::after,
+.tox-collection__item[title='ज्ञ']::after,
+.tox-collection__item[title='स्']::after,
+.tox-collection__item[title='व्']::after,
+.tox-collection__item[title='च्']::after,
+.tox-collection__item[title='ब्']::after,
+.tox-collection__item[title='त्']::after,
+.tox-collection__item[title='ज्']::after,
+.tox-collection__item[title='न्']::after,
+.tox-collection__item[title='ग्']::after,
+.tox-collection__item[title='ल्']::after,
+.tox-collection__item[title='र्']::after,
+.tox-collection__item[title='ख्']::after,
+.tox-collection__item[title='ऋ']::after,
+.tox-collection__item[title='क्ष्']::after,
+.tox-collection__item[title='्']::after,
+.tox-collection__item[title='ं']::after,
+.tox-collection__item[title='ि']::after,
+.tox-collection__item[title='ी']::after,
+.tox-collection__item[title='ृ']::after,
+.tox-collection__item[title='ा']::after,
+.tox-collection__item[title='ु']::after,
+.tox-collection__item[title='ू']::after,
+.tox-collection__item[title='े']::after,
+.tox-collection__item[title='ॅ']::after,
+.tox-collection__item[title='ै']::after,
+.tox-collection__item[title='ौ']::after,
+.tox-collection__item[title=',']::after,
+.tox-collection__item[title="'"]::after,
+.tox-collection__item[title='?']::after,
+.tox-collection__item[title='(']::after,
+.tox-collection__item[title=')']::after {
+  content: attr(title);
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

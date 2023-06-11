@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="314" height="256" viewBox="0 0 314 256">
+  <defs>
+    <clipPath id="clip-Artboard_1">
+      <rect width="314" height="256"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
+    <rect width="314" height="256" fill="#fff"/>
+    <g id="Group_4449" data-name="Group 4449" transform="translate(-1521.018 -324.445)">
+      <g id="location" transform="translate(1569.716 350.747)">
+        <g id="Group_4425" data-name="Group 4425" transform="translate(21.58)">
+          <g id="Group_4424" data-name="Group 4424">
+            <path id="Path_1060" data-name="Path 1060" d="M150.345,0A59.288,59.288,0,0,0,91,59.345c0,12.661,3.8,23.951,11.106,34.53l43.7,68.185a5.394,5.394,0,0,0,9.083,0l43.887-68.417A59.343,59.343,0,0,0,150.345,0Zm0,86.319a26.975,26.975,0,1,1,26.975-26.975A27.006,27.006,0,0,1,150.345,86.319Z" transform="translate(-91)" fill="#2f2d64"/>
+          </g>
+        </g>
+        <g id="Group_4427" data-name="Group 4427" transform="translate(0 123.974)">
+          <g id="Group_4426" data-name="Group 4426">
+            <path id="Path_1061" data-name="Path 1061" d="M154.1,344.7l-27.166,42.472a17.836,17.836,0,0,1-30.025.01L69.7,344.706C45.758,350.242,31,360.382,31,372.5c0,21.027,41.7,32.37,80.924,32.37s80.924-11.343,80.924-32.37C192.849,360.373,178.07,350.227,154.1,344.7Z" transform="translate(-31 -344.695)" fill="#2f2d64"/>
+          </g>
+        </g>
+      </g>
+      <circle id="Ellipse_111" data-name="Ellipse 111" cx="57.294" cy="57.294" r="57.294" transform="translate(1672.015 440.019)" fill="#2f2d64"/>
+      <g id="Group_4428" data-name="Group 4428" transform="translate(1693.501 468.668)">
+        <path id="Union_7" data-name="Union 7" d="M25.779,64.456V38.669H0V25.786H25.779V0h12.89V25.786H64.456V38.669H38.669V64.456Z" transform="translate(0 0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

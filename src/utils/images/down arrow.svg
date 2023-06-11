@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="69" height="68" viewBox="0 0 69 68">
+  <defs>
+    <clipPath id="clip-down_arrow">
+      <rect width="69" height="68"/>
+    </clipPath>
+  </defs>
+  <g id="down_arrow" data-name="down arrow" clip-path="url(#clip-down_arrow)">
+    <rect width="69" height="68" fill="#fff"/>
+    <g id="Group_2826" data-name="Group 2826" transform="translate(18302 13679)">
+      <rect id="Rectangle_2110" data-name="Rectangle 2110" width="46" height="46" rx="10" transform="translate(-18290 -13668)" fill="#fbe4e4"/>
+      <g id="Layer_x0020_1" transform="translate(-18271 -13655)">
+        <path id="Path_113" data-name="Path 113" d="M4.651,12.718V0h-.9V12.718H0l4.2,7.634,4.2-7.634Z" fill="#f44"/>
+      </g>
+    </g>
+  </g>
+</svg>

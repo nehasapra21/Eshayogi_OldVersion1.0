@@ -1,0 +1,658 @@
+.frame3 {
+  border-radius: 20px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+  margin-top: 120px;
+}
+
+.DashboardFooter {
+  box-shadow: 0 3px 6px #d3d7db;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+.DashBoardOuterFrame {
+  background: transparent;
+
+  border-radius: 15px 15px 0px 0px;
+}
+.DashboardFrame {
+  display: flex;
+  margin-top: 20px;
+}
+.DashboardLeftFrame {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #d3d7db;
+  border-radius: 20px;
+  opacity: 1;
+  width: 100%;
+  margin-right: 1%;
+  padding: 30px;
+}
+.DashboardRightFrame {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #d3d7db;
+  border-radius: 20px;
+  opacity: 0.8;
+  padding: 35px;
+  margin-left: 40px;
+  width: 350px;
+}
+.FrameHeading {
+  text-align: left;
+  font-family: SegoeBold;
+  font-size: 18px;
+  letter-spacing: 0.36px;
+  color: #2f2d64;
+  text-transform: capitalize;
+}
+.InsightItemLayout {
+  display: flex;
+  margin-bottom: 15px;
+}
+.InsightItemTag {
+  background: #fff2e2 0% 0% no-repeat padding-box;
+  border-radius: 15px;
+  margin-right: 10px;
+  width: 45px;
+  height: 45px;
+}
+.InsightItemTagTxt {
+  text-align: center;
+  font-size: 25px;
+  font-family: SegoeBold;
+  letter-spacing: 0.64px;
+  color: #f7b500;
+}
+.InsightItemHeading {
+  text-align: left;
+  font-family: Segoe UI;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.36px;
+  color: #2f2d64;
+  margin-bottom: 0px;
+  height: fit-content;
+}
+
+.InsightItemTxt {
+  text-align: left;
+  font-family: Segoe UI;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.36px;
+  color: #000;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  height: fit-content;
+}
+
+.LeftFrameHeading {
+  text-align: left;
+  font-family: SegoeBold;
+  font-size: 12px;
+  letter-spacing: 0.36px;
+  color: #2f2d64;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+.LeftHeading {
+  padding: 0px 14px;
+  text-align: left;
+  font-family: SegoeBold;
+  font-size: 18px;
+  letter-spacing: 0.36px;
+  color: #707070;
+  text-transform: uppercase;
+  margin: 0px;
+  width: fit-content;
+}
+
+.NoRequestTxt {
+  text-align: left;
+  font-family: Segoe UI;
+  font-weight: 500;
+  font-size: 26px;
+  letter-spacing: 0.64px;
+  color: #2f2d64;
+  width: fit-content;
+  margin-bottom: 0px;
+}
+.DataRequestTxt {
+  text-align: left;
+  font-family: Segoe UI;
+  font-weight: 500;
+  font-size: 26px;
+  letter-spacing: 0.64px;
+  color: #2f2d64;
+  width: fit-content;
+  align-self: center;
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
+.ChartDiv {
+  width: 100%;
+  border-left: 1px solid #d8e0ea;
+  padding: 0px 70px;
+}
+@-moz-document url-prefix() {
+  .ChartDiv svg {
+  
+min-width: 250px !important;
+ 
+max-width: 350px !important;
+   }
+}
+.LeftFrameTxt {
+  text-align: left;
+  font-family: Segoe UI;
+  font-weight: 600;
+  font-size: 11px;
+  color: #000;
+  width: fit-content;
+}
+.Arrow {
+  width: 50px;
+}
+.Flex {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.activityImg {
+  height: 250px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.CheckboxContainer {
+  position: relative;
+  top: -225px;
+  left: 25px;
+}
+.CardTextCategory {
+  text-align: left;
+  font-family: SegoeBold;
+  letter-spacing: 0.36px;
+  color: #ffffff;
+  position: relative;
+  top: -190px;
+  left: 25px;
+  font-size: 13px;
+}
+.CardText {
+  text-align: left;
+  font-family: SegoeBold;
+  letter-spacing: 0.36px;
+  color: #ffffff;
+  position: relative;
+  top: -135px;
+  left: 25px;
+  font-size: 13px;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #fff;
+}
+
+/* When the radio button is checked, add a blue background */
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 10px;
+  height: 15px;
+  border: solid #2f2d64;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.donutchart {
+  width: 300px !important;
+  height: 300px !important;
+  margin-top: -55px !important;
+  margin-left: 75px;
+}
+.donutchart-legend {
+  display: none;
+}
+.donutchart-innertext {
+  display: none;
+}
+.donutchart-arcs-path {
+  opacity: 1;
+  background-color: red !important;
+}
+
+.donutchart-arcs {
+  width: 150px !important;
+  height: 150px !important;
+  background: red !important;
+}
+.ChartTxt {
+  font-weight: 600;
+  font-family: Segoe UI;
+  font-size: 13px;
+  color: #2f2d64;
+  margin-bottom: 3px;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 78px;
+  width: 100px;
+}
+.IndicatorLayout {
+  float: right;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 75%;
+  width: 250px;
+}
+.ChartIndicator1 {
+  background-color: #db1b1b;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicator2 {
+  background-color: #19ba44;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicator3 {
+  background-color: #7eb837;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicator4 {
+  background-color: #f89939;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicator5 {
+  background-color: #feb81c;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+
+.ChartIndicator6 {
+  background-color: #25c7fb;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicator7 {
+  background-color: #6e4208;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorPending {
+  background-color: #2f2d64;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorProcessing {
+  background-color: #2f2d64;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorAssigned {
+  background-color: #7e8d37;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorDiscuss {
+  background-color: #7e8d37;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorSanctioned {
+  background-color: #7e8d37;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorRespondedTo {
+  background-color: #7e8d37;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorSolved {
+  background-color: #198a44;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorPlaced {
+  background-color: #198a44;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorAttended {
+  background-color: #198a44;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorWorkDone {
+  background-color: #198a44;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorCleared {
+  background-color: #198a44;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorUnsuccessful {
+  background-color: #db1818;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorRejected {
+  background-color: #db1818;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorResponseNotNeeded {
+  background-color: #db1818;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorDelegated {
+  background-color: #f89939;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorInaugurated {
+  background-color: #f89939;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorShared {
+  background-color: #feb81c;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorScheduled {
+  background-color: #feb81c;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorWorkInProgress {
+  background-color: #feb81c;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorResponseNeeded {
+  background-color: #feb81c;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorPending {
+  background-color: #2f2d64;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorProcessing {
+  background-color: #2f2d64;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorAssigned {
+  background-color: #7e8d37;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorDiscuss {
+  background-color: #7e8d37;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorSanctioned {
+  background-color: #7e8d37;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorRespondedTo {
+  background-color: #7e8d37;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorSolved {
+  background-color: #198a44;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorPlaced {
+  background-color: #198a44;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorAttended {
+  background-color: #198a44;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorWorkDone {
+  background-color: #198a44;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorCleared {
+  background-color: #198a44;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorUnsuccessful {
+  background-color: #db1818;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorRejected {
+  background-color: #db1818;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorResponseNotNeeded {
+  background-color: #db1818;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorDelegated {
+  background-color: #f89939;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorInaugurated {
+  background-color: #f89939;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorShared {
+  background-color: #feb81c;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorScheduled {
+  background-color: #feb81c;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorWorkInProgress {
+  background-color: #feb81c;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartIndicatorResponseNeeded {
+  background-color: #feb81c;
+  height: 7px;
+  border-radius: 8px;
+  width: 20%;
+  margin: 6px 0px;
+}
+.ChartValue {
+  font-weight: 600;
+  font-family: Segoe UI;
+  font-size: 14px;
+  color: #acadb2;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+.requestDiv {
+  display: flex;
+  padding: 7px 0;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid red;
+}
+.separator::before {
+  margin-right: 0.25em;
+}
+.separator::after {
+  margin-left: 0.25em;
+}

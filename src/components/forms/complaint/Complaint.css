@@ -1,0 +1,186 @@
+.TxtName {
+  font-family: Segoe UI;
+  font-weight: 600;
+  font-size: 16px;
+  color: #2f2d64;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+  align-self: center;
+}
+
+.TxtNameLetter {
+  font-family: Segoe UI;
+  font-weight: 600;
+  font-size: 11px;
+  color: #2f2d64;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+  align-self: center;
+}
+
+.TxtRadioInput {
+  font-family: Segoe UI;
+  font-weight: 400;
+  font-size: 18px;
+  color: #2f2d64;
+  margin-top: 0px;
+  text-align: left;
+  align-self: center;
+  height: fit-content;
+  margin-left: 15px;
+  margin-bottom: 0px;
+}
+
+.SelectRadio {
+  background: #fff 0% 0% no-repeat padding-box;
+  border: 1px solid #e3e3e8;
+  border-radius: 3px;
+  display: flex;
+  height: 55px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.GreySelectRadio {
+  background: #fff 0% 0% no-repeat padding-box;
+  border: 1px solid #e3e3e8;
+  border-radius: 3px;
+  display: flex;
+  height: 55px;
+  opacity: 0.3;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.TextareaLayout {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e3e3e8;
+  border-radius: 3px;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 25px;
+  align-self: center;
+  padding: 20px 30px;
+  font-family: Segoe UI;
+  font-weight: 500;
+  box-sizing: border-box;
+  color: #2f2d64;
+  line-height: 22px;
+}
+
+.TextareaLayout::placeholder {
+  font-size: 18px;
+}
+
+.radiobutton {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  margin-left: 12px;
+  margin-top: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.unchecked {
+  position: absolute;
+  left: 0;
+  height: 28px;
+  width: 28px;
+  border: 2px solid #2f2d64;
+  border-radius: 50%;
+}
+
+.checked {
+  position: absolute;
+  left: 0;
+  height: 28px;
+  width: 28px;
+  border: 2px solid #2f2d64;
+  border-radius: 50%;
+}
+
+.checked:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: #2f2d64;
+}
+
+.radiobutton .checked:after {
+  width: 17px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  border-radius: 60%;
+  transform: translate(-50%, -50%);
+}
+.form-control:focus {
+  border-color: #e3e3e8 !important;
+  box-shadow: 0 0 0 -0.8rem #fff !important;
+}
+@media screen and (max-width: 480px) {
+  .FormFrame {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+    background: #fff;
+  }
+  .FormOuterFrame {
+    width: 90%;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.6);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px 15px 0px 0px;
+  }
+}
+
+/* improved style */
+
+input.InputFrame:focus,
+textarea.TextareaLayout:focus {
+  outline: none;
+}
+
+.DivHeadUserInfo {
+  display: flex;
+  justify-content: space-evenly;
+  width: 45%;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

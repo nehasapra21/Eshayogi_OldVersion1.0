@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icons_lelt-open-arrow" data-name="icons/lelt-open-arrow" transform="translate(0 24) rotate(-90)">
+    <g id="Pin_Left" data-name="Pin Left">
+      <path id="Path" d="M3.621,10.5l7.939-7.939A1.5,1.5,0,1,0,9.439.439l-9,9a1.5,1.5,0,0,0,0,2.121l9,9a1.5,1.5,0,1,0,2.121-2.121Z" transform="translate(6 1.5)" fill="#e3e3e8"/>
+      <path id="Shape" d="M0,0H24V24H0Z" fill="none"/>
+    </g>
+  </g>
+</svg>

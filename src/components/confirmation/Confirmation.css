@@ -1,0 +1,360 @@
+.Confirmationframe {
+  padding-bottom: 50px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+  margin-top: 30px;
+}
+.databorder {
+  border-bottom: 1px solid #e3e3e8;
+  padding: 0 10px;
+}
+.Subheader {
+  display: flex;
+  justify-content: space-between;
+  line-height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0 3px 6px rgb(0, 0, 0, 0.2);
+}
+.SubheaderTxtDiv {
+  display: flex;
+  justify-content: center;
+}
+.TxtOfficeof {
+  font-family: Segoe UI;
+  font-weight: 500;
+  font-size: 15px;
+  color: #2f2d64;
+  margin-right: 3px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  align-self: center;
+}
+.TxtSubheader {
+  font-family: SegoeBold;
+  font-size: 15px;
+  color: #2f2d64;
+  margin: 0px;
+  align-self: center;
+}
+.TxtPoweredBy {
+  font-family: Segoe UI;
+  font-weight: 500;
+  font-size: 8px;
+  color: #2f2d64;
+  margin: 0px;
+  align-self: flex-end;
+  padding-right: 2px;
+}
+.SubheaderImg {
+  width: 80px;
+  align-self: center;
+}
+.line {
+  line-height: 1px;
+  background: #bcbcbc;
+  margin-bottom: 25px;
+}
+.TxtConfirmDiscription {
+  font-family: Segoe UI;
+  font-weight: 500;
+  font-size: 13px;
+  color: #2f2d64;
+  align-self: center;
+  text-align: left;
+  word-break: break-all;
+  width: 80%;
+  padding-top: 6px;
+}
+
+.TxtConfirmationB {
+  font-family: SegoeBold;
+  font-size: 13px;
+  color: #2f2d64;
+  align-self: center;
+  text-align: left;
+  margin: 0px;
+  line-height: 35px;
+  padding-top: 6px;
+}
+
+.TxtConfirmation {
+  font-family: Segoe UI;
+  font-weight: 500;
+  font-size: 13px;
+  color: #2f2d64;
+  align-self: center;
+  text-align: left;
+  margin: 0px;
+  text-transform: capitalize;
+  line-height: 35px;
+}
+.TxtConfirmationPNR {
+  font-family: Segoe UI;
+  font-weight: 500;
+  font-size: 13px;
+  color: #2f2d64;
+  align-self: center;
+  text-align: left;
+  margin: 0px;
+}
+.TxtConfirmationLetter {
+  font-family: Segoe UI;
+  font-weight: 500;
+  font-size: 13px;
+  color: #000000;
+  align-self: center;
+  text-align: left;
+  margin: 20px 0px 0px 0px;
+}
+.TxtConfirmationLettersRight {
+  font-family: Segoe UI;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+  text-align: right;
+  margin: 0px 0px 0px 0px;
+}
+.TxtConfirmationLettersRightB {
+  font-family: SegoeBold;
+  font-size: 12px;
+  color: #2f2d64;
+  text-align: right;
+  margin: 0px 0px 0px 0px;
+}
+.TxtConfirmationPNRB {
+  font-family: SegoeBold;
+  font-size: 12px;
+  color: #2f2d64;
+  align-self: center;
+  text-align: left;
+  margin: 0px;
+  padding-top: 6px;
+}
+.TxtBConfirmationB {
+  font-family: SegoeBold;
+  font-size: 12px;
+  color: #2f2d64;
+  align-self: center;
+  text-align: left;
+  margin: 0px;
+  line-height: 35px;
+  padding-top: 6px;
+}
+.TxtBAttachConfirmation {
+  font-family: SegoeBold;
+  font-size: 12px;
+  color: #2f2d64;
+  align-self: center;
+  text-align: left;
+  margin: 0px;
+  padding-top: 6px;
+}
+.TxtAttachConfirmation {
+  margin: 0px;
+  font-size: 9px;
+  text-align: left;
+  padding-left: 10px;
+  font-family: Segoe UI;
+  font-weight: 500;
+  color: #2f2d64;
+}
+.TxtBConfirmation {
+  font-family: Segoe UI;
+  font-weight: 500;
+  font-size: 12px;
+  color: #2f2d64;
+  align-self: center;
+  text-align: left;
+  margin: 0px;
+  line-height: 35px;
+}
+
+/* Button Layouts */
+
+.PrintBtn {
+  width: 195px;
+  margin: 20px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Segoe UI;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 13px;
+  border: none;
+}
+.removePadding {
+  padding: '0px 0px' !important;
+}
+.EditButton {
+  background: #198a44;
+}
+.UpdateButton {
+  background: #2f2d64;
+}
+
+.backIcon {
+  height: 20px;
+  margin-right: 5px;
+  align-self: center;
+  cursor: pointer;
+}
+.PrintBtnLetter {
+  width: 100px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: Segoe UI;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  height: 45px;
+  border: none;
+  background-color: green;
+  margin-right: 97px;
+  margin-top: -20px;
+  margin-bottom: 31px;
+}
+.PrintBtnLetter:hover:focus {
+  border: 0px;
+  outline: 0px;
+}
+
+.PrintBtnLetter:disabled {
+  cursor: not-allowed;
+}
+
+.rheader {
+  height: 50px;
+}
+.borderbottom {
+  border-bottom: 1px solid #e3e3e8;
+  padding: 0 10px;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  .Confirmationframe {
+    margin-top: -100px !important;
+
+    width: 85%;
+    margin-left: 90px;
+    height: auto !important;
+  }
+  .Confirmationframejob {
+    margin-top: -172px !important;
+
+    width: 85%;
+    margin-left: 90px;
+  }
+  .Confirmationframeevent {
+    margin-top: -172px !important;
+
+    width: 85%;
+    margin-left: 90px;
+  }
+  .Confirmationframeprint {
+    margin-top: -172px !important;
+
+    width: 85%;
+    margin-left: 90px;
+  }
+  .Confirmationframemplad {
+    margin-top: -172px !important;
+
+    width: 85%;
+    margin-left: 90px;
+  }
+  .borderbottom {
+    border: none !important;
+  }
+  .TxtPoweredBy {
+    font-size: 13pt !important;
+    margin-top: -20px !important;
+  }
+  .Confirmationframe .SubheaderTxtDiv #imgback {
+    display: none;
+  }
+  .Confirmationframe .SubheaderTxtDiv .SubheaderImg {
+    width: 160px;
+    margin-right: 160px;
+  }
+  .TxtSubheader {
+    font-size: 20pt !important;
+    margin-left: 141px;
+  }
+  .Subheader {
+    padding-bottom: 17px;
+  }
+  div {
+    margin-top: 21px;
+    font-size: 50pt;
+    border-bottom: 0;
+  }
+
+  .Subheader {
+    box-shadow: 0px 2px 9px -3px rgba(36, 36, 36, 1) !important;
+    width: 130%;
+    margin-left: -165px;
+  }
+  .TxtConfirmationB {
+    font-size: 21pt !important;
+    margin-left: -7px;
+  }
+  /* .confirmtxt{
+    font-size: 22pt !important; 
+    margin-left: 10px !important; 
+  } */
+  .TxtBConfirmationB {
+    font-size: 18pt !important;
+    margin-left: 90px;
+    position: absolute;
+  }
+  .TxtBConfirmation {
+    margin-left: 90px;
+    font-size: 16pt !important;
+  }
+  .TxtBAttachConfirmation {
+    margin-left: 90px;
+    font-size: 16pt !important;
+  }
+  .SubheaderTxtDiv {
+    margin-left: 20px;
+  }
+  .TxtConfirmDiscription {
+    font-size: 16pt !important;
+    margin-left: 90px;
+  }
+  .TxtAttachConfirmation {
+    font-size: 16pt !important;
+    margin-left: 90px;
+  }
+  .TxtConfirmation {
+    font-size: 16pt !important;
+  }
+  .pad {
+    margin-left: 90px !important;
+  }
+  .databorder {
+    border-bottom: 0px !important;
+    padding: 0 10px;
+  }
+  .non-printable {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .printable {
+    display: block;
+  }
+  .Spanpadding {
+    min-width: 100px;
+  }
+}

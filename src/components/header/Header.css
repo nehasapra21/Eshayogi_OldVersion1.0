@@ -1,0 +1,334 @@
+.HeaderFrame {
+  height: 65px;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #d3d7db;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+}
+.dropdown {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  min-width: 160px;
+  padding: 5px;
+}
+
+.DivRightHeader {
+  float: right;
+  position: absolute;
+  right: 20px;
+  z-index: 1;
+  display: flex;
+}
+.DivEsahyogi {
+  align-self: center;
+}
+.ImgeSahyogi {
+  width: 150px;
+  align-self: center;
+}
+.DivTabframe {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  left: 0px;
+  right: 0px;
+  height: 60px;
+}
+.DivTabframe2 {
+  display: flex;
+  justify-content: center;
+  left: 0px;
+  right: 0px;
+}
+
+.DivDropdown {
+  margin-top: 20px;
+  float: 'inline-end';
+}
+
+.DropdownText {
+  font-size: 13px;
+  font-family: Segoe UI;
+  font-weight: 500;
+  margin-bottom: 0px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.DropdownTextAccount {
+  text-align: left;
+  font-size: 12px;
+  font-family: Segoe UI;
+  font-weight: 500;
+  align-self: center;
+  margin-bottom: 0px;
+}
+.DropdownTextAccount:hover {
+  text-align: left;
+  font-size: 12px;
+  font-family: SegoeBold;
+  align-self: center;
+  margin-bottom: 0px;
+  color: #2f2d64;
+  text-decoration: none;
+}
+.DropdownTextBold {
+  text-align: left;
+  font-size: 13px;
+  font-family: SegoeBold;
+}
+.DropdownTextName {
+  text-align: left;
+  font-size: 12px;
+  margin-bottom: 5px;
+  padding-top: 0px;
+  font-family: SegoeBold;
+  color: #2f2d64;
+}
+.Dropdown {
+  width: 200px;
+  padding-inline-start: 0px;
+  margin: 2px 0;
+}
+.RequestDropdown {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  width: 110px;
+  padding-inline-start: 0px;
+}
+.DatabaseDropdown {
+  margin-bottom: 0px;
+  margin-top: 20px;
+  width: 150px;
+  padding-inline-start: 0px;
+}
+.DropdownIcon {
+  margin: 0 15px;
+  width: 22px;
+}
+.DropdownIconlarge {
+  width: 33px;
+  margin: 0 10px;
+}
+.DropdownTextEmail {
+  font-size: 10px;
+  text-align: left;
+  margin-bottom: 0px;
+  margin-top: -5px;
+  font-family: Segoe UI;
+  font-weight: 500;
+  color: #2f2d64;
+}
+
+.DropdownItem {
+  display: flex;
+  height: 30px;
+}
+.DropdownItemAccount {
+  display: flex;
+  height: 30px;
+}
+
+.DivTabitem {
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 100px;
+  text-align-last: center;
+}
+
+.DivTabitem:hover p {
+  color: #bcbcbc !important;
+}
+
+.DivTabitemDropdown {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+.DivTabitem:hover .Dropdown {
+  display: block;
+}
+.ImgTabIcon {
+  width: 22px;
+}
+.TxtWhiteTabIcon {
+  font-size: 12px;
+  font-family: Segoe UI;
+  font-weight: 600;
+  color: #2f2d64;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.TxtNonSelectedIcon {
+  font-size: 12px;
+  font-family: Segoe UI;
+  font-weight: 600;
+  color: #acadb2;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.TxtGreenTabIcon {
+  font-size: 12px;
+  font-family: Segoe UI;
+  margin-top: 0px;
+  color: #2f2d64;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+.ImgDrBR {
+  width: 35px;
+  margin-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 50%;
+}
+.ImgDownArrow {
+  width: 15px;
+  margin-left: 5px;
+}
+.CurrentTab {
+  color: #2f2d64;
+  font-family: SegoeBold;
+  align-self: center;
+  font-size: 13px;
+}
+.a {
+  color: #2f2d64;
+  font-family: Segoe UI;
+  font-weight: 500;
+  align-self: center;
+  margin: 0;
+}
+.a:hover {
+  color: #2f2d64;
+  font-family: SegoeBold;
+  align-self: center;
+  text-decoration: none !important;
+}
+.a1 {
+  color: #2f2d64;
+  text-decoration: none;
+  font-family: SegoeBold;
+  align-self: center;
+}
+.bs-popover-auto[x-placement^='bottom'] {
+  margin-top: 1.5rem !important;
+}
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+
+  border-bottom: 8px solid #ffffff;
+  position: absolute;
+  top: -8px;
+}
+@media screen and (max-width: 480px) {
+  .HeaderFrame {
+    display: none;
+  }
+}
+.home-link {
+  color: black;
+}
+.img-link {
+  color: black;
+  align-self: center;
+}
+
+/* improved css */
+
+.popover {
+  border-radius: 15px !important;
+  border: none !important;
+  box-shadow: 2px 3px 5px rgb(0, 0, 0, 0.2);
+  padding: 5px 0;
+}
+
+.dropdown-divider {
+  margin: 8px 0 !important;
+}
+
+.DropdownText a:hover {
+  text-decoration: none;
+}
+
+.accountDropdown {
+  top: 25px !important;
+}
+
+.databaseDropdown {
+  top: 17px !important;
+}
+
+div#occasions {
+  z-index: 9999;
+}
+
+/* REACT DROPDOWN MODIFY UI */
+
+button.dropdown-toggle.btn.btn-primary,
+button.dropdown-toggle.btn.btn-primary:active {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+button.dropdown-toggle.btn.btn-primary:focus {
+  border: none;
+}
+
+.btn-primary:focus,
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none !important;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.showDropdown {
+  border-radius: 10px;
+  top: 30% !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: transparent !important;
+}
+
+.userDropdown {
+  margin: 0;
+}
+
+.userDropdown .userDropdownBody {
+  top: 75% !important;
+}
+
+.directoryDropdown .showDropdown.dropdown-menu.show {
+  text-align-last: left;
+  left: -200% !important;
+}

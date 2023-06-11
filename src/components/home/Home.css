@@ -1,0 +1,169 @@
+.BackgroundHomeframe{
+    background-color: #F2F2FC;
+    padding-bottom: 5%;
+}
+.HomeFrame{
+    background: #2F2D64 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px rgb(0,0,0,0.2);
+    margin-top: 60px;
+    border-radius: 15px;
+
+}
+.Home{
+    background: #2F2D64 0% 0% no-repeat padding-box;
+    width:250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+.TxtWelcome{
+    text-align: center;
+    font-family: Segoe UI;
+    font-weight: 600;
+    margin-bottom: 0px;
+    font-size:25px;
+    color: #fff;
+    margin-top: 50px;
+}
+.HomeEsahyogi{
+    text-align: center;
+    font-family: Segoe UI;
+    font-weight: 500;;
+    width: 100px;
+    margin-bottom: 80px;
+}
+.ImgDiv{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+
+}
+
+.ImgClient{
+    width:60px;
+    margin-right: 7px;
+    margin-left: 7px;
+}
+.TxtOfficeOf{
+    text-align: center;
+    font-family: SegoeBold;
+    font-size: 16px;
+    margin-bottom: 0px;
+    color: #fff;
+}
+.TxtDesignation{
+    font-family: Segoe UI;
+    font-weight: 500;
+    font-size: 13px;
+    margin-bottom: 70px;
+    margin-top: 0px;
+    color: #fff;
+}
+.TxtHelp{
+    font-family: Segoe UI;
+    font-weight: 500;;
+    font-size: 11px;
+    margin-bottom: 0px;
+    color: #fff;
+}
+.TxtHelpLink{
+    font-family: Segoe UI;
+    font-weight: 500;;
+    font-size: 13px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #fff;
+    display: none;
+}
+.TxtHelpLink a{
+    font-family: Segoe UI;
+    font-weight: 500;;
+    font-size: 13px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #fff;
+    text-align: center;
+}
+.DivCopyright{
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    padding-bottom: 30px;
+
+}
+.TxtCopyright{
+    font-family: Segoe UI;
+    font-weight: 500;;
+    font-size: 10px;
+    margin-bottom: 0px;
+    align-self: flex-end;
+    color: #fff;
+    margin-right: 5px;
+    margin-left: auto;
+}
+.ImgTif{
+    width:30px;
+    margin-right: auto;
+
+}
+.ImgClient{
+    border-radius:50% ;
+}
+@media screen and (max-width: 480px){
+    .HomeFrame{
+        background: #2F2D64 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        margin-top: 0px;
+        height: 100%;
+        border-radius: 0px;
+    
+    }
+    .frame{
+        width:100%;
+
+        height: 90%;
+    }
+    .Home{
+        background: #2F2D64 0% 0% no-repeat padding-box;
+        padding-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+    .BackgroundHomeframe{
+        background-color: #F2F2FC;
+        padding-bottom: 0px;
+        height: 100%;
+        
+    }
+    
+    .LoginframeBackground{
+        background: transparent;
+        width: 100%;
+        height: 90%;
+        padding-bottom: 0px;
+    }
+    .TxtWelcome{
+        text-align: center;
+        font-family: Segoe UI;
+        font-weight: 600;
+        margin-bottom: 0px;
+        font-size:13px;
+        color: #fff;
+        margin-top: 30px;
+    }
+    .ImgDiv{
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    
+    }
+    .ImgClient{
+        width:50px;
+        margin-right: 7px;
+        margin-left: 7px;
+    }
+}

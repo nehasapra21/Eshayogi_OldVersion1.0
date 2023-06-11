@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="314" height="256" viewBox="0 0 314 256">
+  <defs>
+    <clipPath id="clip-Artboard_1">
+      <rect width="314" height="256"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
+    <rect width="314" height="256" fill="#fff"/>
+    <g id="Group_4448" data-name="Group 4448" transform="translate(-1514.58 -397.629)">
+      <g id="Group_4431" data-name="Group 4431" transform="translate(1575 432.195)">
+        <g id="Profile">
+          <path id="Union_1" data-name="Union 1" d="M0,142V124.252c0-19.529,31.95-35.5,71-35.5s71,15.975,71,35.5V142ZM35.5,35.5A35.5,35.5,0,1,1,71,71,35.5,35.5,0,0,1,35.5,35.5Z" transform="translate(-0.42 0.434)" fill="#2f2d64"/>
+        </g>
+        <circle id="Ellipse_112" data-name="Ellipse 112" cx="64.459" cy="64.459" r="64.459" transform="translate(90.242 56.754)" fill="#2f2d64"/>
+      </g>
+      <g id="Group_4430" data-name="Group 4430" transform="translate(1691.013 514.733)">
+        <path id="Union_7" data-name="Union 7" d="M30.938,77.344V46.406H0V30.945H30.938V0H46.414V30.945H77.367V46.406H46.414V77.344Z" transform="translate(0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

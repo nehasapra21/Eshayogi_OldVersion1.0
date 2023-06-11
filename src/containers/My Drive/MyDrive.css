@@ -1,0 +1,786 @@
+/* My Drive styles */
+
+.drive-frame-upper {
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  border-radius: 20px;
+}
+
+.frame-drive {
+  display: flex;
+  width: 100%;
+  margin: 50px 0;
+  margin-top: 0;
+}
+
+.myDrive-head {
+  padding: 20px 32px 0;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+}
+
+.left-frame {
+  display: block;
+  width: 23%;
+}
+
+.sidebar {
+  display: block;
+  height: 100%;
+  background-color: #fff;
+  padding: 0px 15px 0 0;
+  border-radius: 0px 0 0 20px;
+}
+
+ul.sidebar-options {
+  list-style: none;
+  padding: 30px 0;
+  margin: 0;
+}
+
+ul.sidebar-options li a {
+  text-decoration: none;
+  color: #5f6368;
+  font-size: 13px;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  background: transparent;
+  display: flex;
+  border-radius: 0 66px 66px 0;
+  transition: all 0.3s;
+  align-items: center;
+  letter-spacing: 0.5px;
+  height: 40px;
+  padding-left: 20px;
+}
+
+ul.sidebar-options li a:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+ul.sidebar-options li.active a {
+  background-color: rgba(47, 45, 100, 16%);
+  color: #2d2f64;
+}
+
+ul.sidebar-options li a span {
+  padding-right: 20px;
+}
+
+ul.sidebar-options li a span svg {
+  width: 20px;
+  height: auto;
+}
+
+ul.sidebar-options li a span svg path,
+ul.sidebar-options li a span svg g circle {
+  fill: #5f6368;
+}
+
+ul.sidebar-options li.active a span svg path,
+ul.sidebar-options li.active a span svg g circle {
+  fill: #2d2f64;
+}
+
+.right-frame {
+  display: block;
+  width: 100%;
+}
+
+.myDrive-dropdown.dropdown {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: all 0.3s;
+  transform: translateX(-13px);
+}
+
+.myDrive-dropdown.dropdown.show {
+  background-color: rgba(47, 45, 100, 16%);
+}
+
+.myDrive-dropdown.dropdown:hover {
+  background-color: rgba(47, 45, 100, 16%);
+}
+
+.myDrive-dropdown.dropdown button#dropdown-basic {
+  background: transparent;
+  border: none;
+  color: #2f2d64;
+  font-size: 20px;
+  padding: 0;
+  font-family: 'Segoe UI';
+}
+
+.myDrive-dropdown.dropdown button#dropdown-basic:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.myDrive-dropdown.dropdown button#dropdown-basic:after {
+  margin-left: 20px;
+}
+
+.myDrive-dropdown .dropdown-menu.show {
+  width: 250px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 14%);
+  border-radius: 10px;
+  border: none;
+  transform: translate(0px, 45px) !important;
+}
+
+.myDrive-dropdown a.dropdown-item {
+  padding: 10px 15px;
+}
+
+.myDrive-dropdown a.dropdown-item:active {
+  background-color: none;
+}
+
+div#drive-dropdown-item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-family: 'Segoe UI';
+  font-size: 16px;
+  color: #2d2f64;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+div#drive-dropdown-item > span > svg > path {
+  fill: #e1dbdb;
+}
+
+div#drive-dropdown-item.active > span > svg > path {
+  fill: #2f2d64;
+}
+
+.drive-frame {
+  display: block;
+  background: #fff;
+  padding: 35px;
+  border-radius: 0 0 20px 0;
+  padding-top: 0;
+}
+
+.mydrive-create-header,
+.mydrive-upload-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e3e3e8;
+}
+
+.mydrive-create-header h3,
+h3.name-header {
+  margin: 0;
+  font-size: 20px;
+  color: #2f2d64;
+  font-family: 'Segoe UI Bold';
+  font-weight: bold;
+}
+
+.mydrive-create-header .btn.btnSubmit,
+.btn.uploadBtn label {
+  padding: 10px 25px;
+  border-radius: 10px;
+  margin: 0;
+  font-size: 14px;
+  background: transparent;
+  color: #2f2d64;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+  border-radius: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.mydrive-create-header .btn.btnSubmit:hover {
+  box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%);
+  background-color: #f8f9fa;
+}
+
+.MuiPaper-root.folder-table-container {
+  box-shadow: none;
+  margin-bottom: 25px;
+}
+
+th.folder-table-header-cell {
+  font-family: 'Segoe UI';
+  font-size: 14px;
+  color: #2f2d64;
+}
+
+.folder-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  border-radius: 20px;
+  margin: 20px 0;
+  padding: 0 15px;
+}
+
+.folder-name {
+  display: flex;
+  align-items: center;
+}
+
+.folder-name .icon svg {
+  width: 18px;
+  height: auto;
+}
+
+.folder-name a {
+  text-decoration: none;
+}
+
+.folder-name a h3 {
+  margin: 0 0 0 10px;
+  font-size: 14px;
+  color: #2f2d64;
+  font-family: 'Segoe UI';
+}
+
+.folder-info {
+  display: flex;
+  justify-content: space-between;
+  width: 23%;
+}
+
+.folder-info p,
+.file-info p {
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Segoe UI';
+  font-weight: 400;
+  color: #727274;
+}
+
+.share-tabs {
+  display: flex;
+  width: 13%;
+}
+
+.helper-functions {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.helper-functions div {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.info-head {
+  display: flex;
+  align-items: center;
+}
+
+.info-head h4 {
+  margin: 0 20px;
+  font-family: 'Segoe UI Bold';
+  font-weight: bold;
+  color: #2f2d64;
+  font-size: 20px;
+}
+
+.info-head h4 span {
+  margin-left: 20px;
+}
+
+.btn.uploadBtn label input {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-name {
+  display: flex;
+  align-items: center;
+}
+
+.file-name p {
+  margin: 0;
+  font-family: 'Segoe UI';
+  font-size: 14px;
+  margin-left: 20px;
+  color: #2f2d64;
+  text-decoration: none;
+}
+
+.file-info {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.frame-drive.no-padding {
+  padding: 0;
+  padding-bottom: 40px;
+}
+
+.frame-drive.no-padding .mydrive-create-header,
+.frame-drive.no-padding .mydrive-upload-header {
+  padding: 0 0 10px;
+  margin: 0 35px;
+}
+
+.frame-body .helper-icons {
+  display: flex;
+  padding: 20px 35px 0;
+  width: 35%;
+  justify-content: space-between;
+}
+
+p.no-data-text {
+  font-family: 'Segoe UI Bold';
+  color: #2f2d64;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.album-frame-body {
+  max-height: 650px;
+  overflow-y: auto;
+}
+
+.album-frame-body::-webkit-scrollbar {
+  display: none;
+}
+
+.album {
+  position: relative;
+  display: inline-block;
+  width: 165px;
+  margin: 20px 20px;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  margin-right: 0;
+}
+
+.album-context-menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+button.album-menu-btn {
+  padding: 5px;
+}
+
+button.album-menu-btn svg path {
+  fill: #2f2d64;
+}
+
+.album-menu .MuiMenu-paper {
+  border-radius: 10px;
+}
+
+.album-menu ul li {
+  font-family: 'Segoe UI';
+  font-size: 14px;
+  color: #2f2d64;
+  display: block;
+  padding: 5px 10px;
+}
+
+.album a {
+  text-decoration: none;
+}
+
+.album label {
+  margin: 0 !important;
+}
+
+.album input[type='checkbox'] {
+  display: block;
+  position: absolute;
+  top: 7%;
+  left: 85%;
+}
+
+.album .back-div {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px 10px 0 0;
+  background-position: center;
+}
+
+.album-name {
+  display: flex;
+  align-items: baseline;
+  padding: 10px;
+}
+
+.album-name .icon svg {
+  width: 18px;
+  height: auto;
+}
+
+.album-name h4 {
+  font-family: 'Segoe UI';
+  font-size: 14px;
+  text-decoration: none;
+  margin: 0;
+  margin-left: 10px;
+  color: #2f2d64;
+}
+
+.album-photo {
+  display: inline-block;
+  width: 165px;
+  margin: 20px;
+  border-radius: 10px;
+  height: 180px;
+  margin-right: 0;
+}
+
+.album-photo label {
+  position: relative;
+  height: 100%;
+}
+
+.album-photo label img {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.album-photo label input[type='checkbox'] {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 20px;
+  height: 20px;
+}
+
+.dialog-box {
+  display: flex;
+  position: fixed;
+  height: 100vh;
+  width: -webkit-fill-available;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 0, 0, 0.4);
+  top: 0;
+  z-index: 100;
+}
+
+.box-body {
+  display: block;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  width: 470px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 14%);
+}
+
+.box-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div#cross-btn {
+  cursor: pointer;
+}
+
+.box-head h4 {
+  font-family: 'Segoe UI';
+  font-size: 23px;
+  font-weight: 700;
+  color: #2f2d64;
+  margin-left: 12px;
+}
+
+.box-head h5 {
+  font-family: 'Segoe UI';
+  font-size: 18px;
+  font-weight: 700;
+  color: #2f2d64;
+}
+
+.box-body form {
+  padding: 30px 0 0 0;
+}
+
+.control-btnx {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.control-btnx button.btn.btnSubmit.cancelBtn {
+  border-radius: 10px;
+  border: 1px solid #707070;
+  background-color: #fff;
+  color: #7a7a83;
+  padding: 10px 30px;
+  margin: 10px 20px;
+}
+
+.control-btnx button.btn.btnSubmit {
+  border-radius: 10px;
+  padding: 10px 30px;
+  margin: 10px 0;
+}
+
+.helper-dropdown button {
+  background-color: transparent;
+  border: none;
+  color: #2f2464;
+}
+
+.helper-dropdown button:hover {
+  background-color: #2f2464 !important;
+  color: #fff;
+}
+
+.helper-dropdown button:active {
+  background-color: #2f2d64 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.helper-dropdown button:focus,
+.helper-dropdown .show > .btn-primary.dropdown-toggle:focus {
+  background-color: #2f2d64;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+}
+
+.helper-dropdown .dropdown-menu.show {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 14%);
+  width: 200px;
+}
+
+.helper-dropdown a.dropdown-item {
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px;
+}
+
+.helper-dropdown .dropdown-menu.show a svg {
+  width: 14px;
+  height: 17px;
+}
+
+.helper-dropdown a.dropdown-item p {
+  font-family: 'Segoe UI';
+  font-size: 18px;
+  color: #727274;
+  margin: 0;
+  margin-left: 20px;
+}
+
+.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters.shared-accordation {
+  margin: 16px 0 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%) !important;
+}
+
+.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters.shared-accordation:before {
+  background-color: transparent;
+}
+
+.share-to-header,
+.share-with-header {
+  padding: 0 16px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.share-to-header.Mui-expanded,
+.share-with-header.Mui-expanded {
+  min-height: 47px !important;
+}
+
+.share-to-header
+  .MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters,
+.share-with-header
+  .MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters {
+  margin: 10px 0;
+}
+
+.MuiCollapse-wrapper.MuiCollapse-vertical.css-smkl36-MuiCollapse-wrapper {
+  padding-bottom: 20px;
+}
+
+p.shared-head {
+  font-family: 'Segoe UI Bold';
+  font-size: 18px;
+  color: #2f2d64;
+}
+
+.select-all-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.select-all-div p {
+  font-family: 'Segoe UI SemiBold';
+  font-size: 16px;
+  margin: 0;
+  color: #2f2d64;
+  margin-left: 10px;
+}
+
+ul.select-list {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow: auto;
+}
+
+ul.select-list::-webkit-scrollbar {
+  display: none;
+}
+
+.select-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.avatar-name-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar-name-div .MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault {
+  width: 30px;
+  height: 30px;
+}
+
+.select-item li {
+  font-family: 'Segoe UI SemiBold';
+  color: #727274;
+  margin: 0;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.accord-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.accord-btn button {
+  font-family: 'Segoe UI';
+  color: #fff;
+  font-size: 14px;
+  width: 90px;
+  text-align: center;
+  border: 1px solid #2d2f64;
+  background-color: #2d2f64;
+  transition: all 0.3s;
+  padding: 6px 0;
+  border-radius: 10px;
+}
+
+.accord-btn button:hover {
+  background-color: transparent;
+  color: #2d2f64;
+}
+
+nav.react-contextmenu.photo-context-menu.react-contextmenu--visible {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  width: 130px;
+  padding: 10px 0;
+}
+
+.photo-menu-item.react-contextmenu-item {
+  display: block;
+  font-family: 'Segoe UI';
+  font-size: 14px;
+  color: #2f2d64;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.context-link {
+  text-decoration: none;
+}
+
+.react-contextmenu-wrapper {
+  width: inherit;
+  height: inherit;
+}
+
+.album-photo .react-contextmenu-wrapper img {
+  width: inherit;
+  height: inherit;
+}
+
+.errorMsg {
+  font-family: Segoe UI;
+  font-size: 16px;
+  color: red;
+}
+
+@media screen and (max-width: 1440px) {
+  div#drive-dropdown-item,
+  .folder-info p,
+  .file-name p,
+  .file-info p {
+    font-size: 16px;
+  }
+  .folder-name h3 {
+    font-size: 20px;
+  }
+  .errorMsg {
+    font-size: 14px !important;
+  }
+}
+
+/* My Drive styles ends here */
+
+/* Pagination Styles */
+
+.drive-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.drive-pagination.pad-page {
+  padding: 0 35px 35px;
+}
+
+.drive-pagination
+  button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-page.Mui-selected {
+  color: #fff;
+  background: rgb(47, 36, 100);
+}
+
+.drive-pagination
+  button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-page {
+  color: #2f2d64;
+}
+
+.drive-pagination
+  button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-page:hover {
+  background-color: rgb(47, 36, 100, 20%);
+}
+
+/* Pagination Styles ends */

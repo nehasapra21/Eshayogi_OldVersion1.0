@@ -1,0 +1,104 @@
+.popover{
+    top:5px;
+}
+.Experience{
+display: flex;
+justify-content: space-between;
+}
+.InnerExperience{
+width: 49%;
+}
+.popover.show.bs-popover-auto{
+    top: 40px !important;
+    left: 20px !important;
+}
+.ExperienceDropdown{
+    background: #FFFFFF;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100px;
+    margin-right: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    margin-top: -40px;
+}
+.DropdownItemExperience{
+    display: flex;
+    height: 25px;
+    cursor: pointer;
+}
+.DropdownTextExperience{
+    text-align: left;
+    font-size: 13px;
+    font-family: Segoe UI;
+    font-weight: 500;;
+    align-self: center;
+    width:100%
+
+}
+.TxtExperience{
+    text-align: left;
+    margin-bottom: 0px;
+    align-self: center;
+}
+.AddAssigneeFrame{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E3E3E8;
+    border-radius: 3px;
+    height: 75px;
+    width: 95%;
+    font-size: 15px;
+    margin-bottom: 30px;
+    padding:22px;
+    box-sizing: border-box;
+}
+.More{
+    width:5%;
+    border: 1px solid #E3E3E8;
+    height: 60px;
+    padding: 7px;
+}
+.ImgMore{
+    width:20px;
+    align-self: center;
+    margin-top: 20px;
+}
+._2iA8p44d0WZ-WqRBGcAuEV{
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 5px;
+    min-height: 22px;
+    position: relative;
+    background: #fff 0% 0% no-repeat padding-box;
+    border: 1px solid #E3E3E8;
+    border-radius: 3px;
+    display: flex;
+    height: 55px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+._3vt7_Mh4hRCFbp__dFqBCI li:hover {
+    background: #eaeaea;
+    color: #040404;
+    cursor: pointer;
+}
+._3vt7_Mh4hRCFbp__dFqBCI li {
+    background: #ffffff;
+    color: #000;
+}
+._3vLmCG3bB3CM2hhAiQX1tN {
+    top: 55px;
+    border-radius: 4px;
+}
+._7ahQImyV4dj0EpcNOjnwA {
+    padding: 2px 15px  !important;
+    background: #2f2d64 !important;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px  !important;
+    color: #fff;
+    white-space: nowrap;
+}

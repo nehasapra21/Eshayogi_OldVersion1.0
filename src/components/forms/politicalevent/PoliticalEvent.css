@@ -1,0 +1,31 @@
+.react-datepicker__day--selected:hover {
+  background-color: #2f2d64 !important;
+}
+.react-datepicker-wrapper {
+  display: flex !important;
+  padding: 0px !important;
+  border: 0px;
+}
+.react-datepicker__day--selected {
+  background-color: #2f2d64 !important;
+}
+.react-time-picker__wrapper {
+  border: 0px !important;
+  flex-grow: unset !important;
+  color: #2f2d64 !important;
+}
+.react-time-picker__inputGroup__amPm {
+  -moz-appearance: unset !important;
+  color: #2f2d64 !important;
+}
+.react-time-picker {
+  align-self: center !important;
+  color: #2f2d64 !important;
+}
+react-time-picker,
+.react-time-picker *,
+.react-time-picker ::before,
+.react-time-picker ::after {
+  align-self: center !important;
+  color: #2f2d64 !important;
+}

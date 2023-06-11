@@ -1,0 +1,48 @@
+.IconFooterframe {
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: #fff;
+  margin-top: 22px;
+  margin-left: auto;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 0 4.5%;
+}
+.DivIcon {
+  border-top: 2px;
+  border-bottom: 3px;
+  border-color: #000;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.InnerdivIcon {
+  display: inline-flex;
+  align-items: center;
+  width: 33%;
+}
+
+.ImgIcon1 {
+  width: 40px;
+  margin-right: 10px;
+}
+.ImgIcon2 {
+  width: 88px;
+  margin-right: 10px;
+  height: 40px;
+  align-self: center;
+}
+.ImgIcon3 {
+  width: 40px;
+  margin-right: 10px;
+}
+.TxtIcon {
+  font-size: 16px;
+  font-family: Segoe UI;
+  font-weight: 500;
+  margin: 0;
+}
+@media screen and (max-width: 480px) {
+  .IconFooterframe {
+    display: none;
+  }
+}

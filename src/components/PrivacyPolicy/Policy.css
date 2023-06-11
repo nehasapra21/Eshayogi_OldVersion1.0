@@ -1,0 +1,100 @@
+.agreementContainer {
+  display: block;
+  background : #FFFFFF;
+  border-radius: 20px;
+  color: #2F2D64;
+  text-align: left;
+  font-family: Segoe UI;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  margin: 50px auto;
+  letter-spacing: 0.5px;
+  margin-top: 100px;
+}
+
+.agreementHeader {
+  height: 68px;
+  box-shadow : 0px 15px 20px -15px rgb(0,0,0,0.25);
+  text-align: center;
+  margin-bottom : 30px;
+}
+
+.agreementInfo {
+  padding : 0 55px !important;
+}
+
+ol.agreementPoints {
+  padding: 0;
+  margin: 0 !important;
+}
+
+p.info, p.pointHead {
+  padding: 0;
+  margin: 0;
+}
+
+ol.infoList {
+  list-style: lower-alpha;
+  padding: 0;
+}
+
+li.pointHead, li.info {
+  margin-left: 0.8rem;
+}
+
+.agreementHead {
+  font-size : 18px;
+  line-height: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: -webkit-fill-available;
+}
+@-moz-document url-prefix() {
+ .h1data{
+   padding-top: 20px;
+ }
+}
+
+.pointHead {
+ margin-top : 22px;
+ font-weight: 700;
+}
+
+.topMarg {
+  margin-top: 22px !important;
+}
+
+.agreementBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.agreementBtn {
+  font-family : Segoe UI;
+  font-weight: 600;
+  border-radius : 6px;
+  padding : 16px 0;
+  margin: 0 20px;
+  width : 195px;
+  border : none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.greyBtn {
+  background-color : #BCBCBC;
+}
+
+.purpleBtn {
+  background-color: #2F2D64;
+}
+
+.contactUs {
+  font-weight: 700;
+  margin-top: 20px !important;
+}

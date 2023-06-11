@@ -1,0 +1,60 @@
+.mapComponent {
+  /* display: flex; */
+  /* margin-top: 27px; */
+}
+
+.map {
+  width: 70%;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.areaList {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.areaListUl {
+  margin: 0 !important;
+  padding: 0px !important;
+  list-style: none !important;
+  background-color: transparent !important;
+}
+
+.areaListItems {
+  display: inline-block !important;
+  width: 125px !important;
+  box-shadow: none !important;
+  font-family: "SegoeBold" !important;
+  background: transparent !important;
+  color: #2f2d64 !important;
+  text-align: none !important;
+  margin: 0px !important;
+  padding: 2px 0 !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  color: #000;
+  padding: 3px;
+  background: white;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 1000;
+  font-size: small;
+  font-family: "Segoe UI";
+}
+
+.container img {
+  top: 1px !important;
+  left: 1px !important;
+}

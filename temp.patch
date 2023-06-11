@@ -1,0 +1,1387 @@
+diff --git a/build.zip b/build.zip
+index 75c4245..29e105d 100644
+Binary files a/build.zip and b/build.zip differ
+diff --git a/src/components/Constituency/ConstituencyForms/BoothLevel.js b/src/components/Constituency/ConstituencyForms/BoothLevel.js
+index 781169f..6a4e256 100644
+--- a/src/components/Constituency/ConstituencyForms/BoothLevel.js
++++ b/src/components/Constituency/ConstituencyForms/BoothLevel.js
+@@ -5,23 +5,22 @@ import { Typeahead } from 'react-bootstrap-typeahead'
+ import warningLogo from '../../../utils/images/warningLogo.png'
+ 
+ export default class BoothLevel extends Component {
+-
+   constructor(props) {
+     super(props)
+ 
+-    if( this.props.data !== undefined ) {
+-        this.state = {
+-          name : this.props.data.data.meta.name,
+-          number : this.props.data.data.meta.number,
+-          gramPanchayat : this.props.data.data.meta.gramPanchayat,
+-          updateConstData : this.props.data.updateConstData
+-        }
++    if (this.props.data !== undefined) {
++      this.state = {
++        name: this.props.data.data.meta.name,
++        number: this.props.data.data.meta.number,
++        gramPanchayat: this.props.data.data.meta.gramPanchayat,
++        updateConstData: this.props.data.updateConstData,
++      }
+     } else {
+       this.state = {
+-        name : '',
+-        number : '',
+-        gramPanchayat : '',
+-        updateConstdistrict : false
++        name: '',
++        number: '',
++        gramPanchayat: '',
++        updateConstdistrict: false,
+       }
+     }
+   }
+@@ -30,25 +29,27 @@ export default class BoothLevel extends Component {
+   showWarning = false
+ 
+   componentDidMount() {
+-    api.getConstituencyData({
+-      type : 'Gram Panchayat',
+-      limit : '100',
+-      offset : '0',
+-      status : true
+-    }).then(
+-      response => {
+-        if(response.ok) {
++    api
++      .getConstituencyData({
++        type: 'Mandal Level',
++        limit: '1000',
++        offset: '0',
++        status: true,
++      })
++      .then((response) => {
++        if (response.ok) {
+           console.log('Successfully fetch constituency', response)
+-          if ( response.data.data === undefined ) {
++          if (response.data.data === undefined) {
+             this.showWarning = true
+           } else {
+-            response.data.data.rows.map( wonderer => (
+-              this.gramPanchayat.includes(wonderer.meta.name) ? null : this.gramPanchayat.push(wonderer.meta.name)
+-            ))
++            response.data.data.rows.map((wonderer) =>
++              this.gramPanchayat.includes(wonderer.meta.name)
++                ? null
++                : this.gramPanchayat.push(wonderer.meta.name)
++            )
+           }
+         }
+-      }
+-    )
++      })
+   }
+ 
+   showConfirmBox = false
+@@ -56,74 +57,101 @@ export default class BoothLevel extends Component {
+   render() {
+     return (
+       <Fragment>
+-        {
+-          this.showWarning ?
+-          <div className='warningMsg'>
+-            <div className='warningHead'>
+-              <img className='warningLogo' src={ warningLogo } alt=''></img>
++        {this.showWarning ? (
++          <div className="warningMsg">
++            <div className="warningHead">
++              <img className="warningLogo" src={warningLogo} alt=""></img>
+               <p>Warning</p>
+             </div>
+-            <p className='warningTxt'>Please Make atleast one Gram Panchayat</p>
+-          </div> :
++            <p className="warningTxt">Please Make atleast one Gram Panchayat</p>
++          </div>
++        ) : (
+           <Fragment>
+-            <form onSubmit = {(e) => {
+-              this.props.getConstituencyData(e, this.state)
+-            }}>
++            <form
++              onSubmit={(e) => {
++                this.props.getConstituencyData(e, this.state)
++              }}
++            >
+               <div className="TxtInputFrame">
+                 <p className="TxtInput">Name</p>
+                 <p className="TxtStar">*</p>
+               </div>
+-              <input     
++              <input
+                 type="text"
+                 className="InputFrame"
+                 placeholder="Please enter booth name"
+-                onChange = { (e) => this.setState({ name : e.target.value }) }
+-                value={ this.state.name }
+-                required />
++                onChange={(e) => this.setState({ name: e.target.value })}
++                value={this.state.name}
++                required
++              />
+ 
+               <div className="TxtInputFrame">
+                 <p className="TxtInput">Number</p>
+                 <p className="TxtStar">*</p>
+               </div>
+-              <input     
++              <input
+                 type="number"
+                 className="InputFrame"
+                 placeholder="Please enter Booth Number"
+-                onChange = { (e) => this.setState({ number : e.target.value }) }
+-                value={ this.state.number }
+-                required />
+-              
+-              <div className='TxtInputFrame'>
+-                <p className='TxtInput'>Gram Panchayat</p>
+-                <p className='TxtStar'>*</p>
++                onChange={(e) => this.setState({ number: e.target.value })}
++                value={this.state.number}
++                required
++              />
++
++              <div className="TxtInputFrame">
++                <p className="TxtInput">Mandal</p>
++                <p className="TxtStar">*</p>
+               </div>
+               <Typeahead
+-                    id = 'gramPanchayat'
+-                    labelKey = 'gramPanchayat'
+-                    placeholder = 'Please select a Gram Panchayat'
+-                    onChange = { (gramPanchayat) => this.setState({ gramPanchayat : gramPanchayat[0] }) }
+-                    options = { this.gramPanchayat }
+-                    defaultInputValue = { this.state.gramPanchayat }
+-                  />
++                id="gramPanchayat"
++                labelKey="gramPanchayat"
++                placeholder="Please select a Gram Panchayat"
++                onChange={(gramPanchayat) =>
++                  this.setState({ gramPanchayat: gramPanchayat[0] })
++                }
++                options={this.gramPanchayat}
++                defaultInputValue={this.state.gramPanchayat}
++              />
+ 
+-              {
+-                this.state.updateConstData ? <input type="submit" value="Update" className="BtnSubmit" onClick={ () => {
+-                  console.log('Enters Function')
+-                  this.showConfirmBox = true
+-                }} /> : <input type="submit" value="Submit" className="BtnSubmit" onClick={ () => {
+-                  console.log('Enters Function')
+-                  this.showConfirmBox = true
+-                }} />
+-              }
++              {this.state.updateConstData ? (
++                <input
++                  type="submit"
++                  value="Update"
++                  className="BtnSubmit"
++                  onClick={() => {
++                    console.log('Enters Function')
++                    this.showConfirmBox = true
++                  }}
++                />
++              ) : (
++                <input
++                  type="submit"
++                  value="Submit"
++                  className="BtnSubmit"
++                  onClick={() => {
++                    console.log('Enters Function')
++                    this.showConfirmBox = true
++                  }}
++                />
++              )}
+             </form>
+-            {
+-              this.showConfirmBox ? this.state.updateConstData ?
+-              <ConstituencyAlert msg = 'Booth Level Updated' showConfirmBox = { this.showConfirmBox } location = {'/manage-constituency'} /> : 
+-              <ConstituencyAlert msg = 'Booth Level Created' showConfirmBox = { this.showConfirmBox } location = {'/add-constituency'} /> :
+-              null
+-            }
++            {this.showConfirmBox ? (
++              this.state.updateConstData ? (
++                <ConstituencyAlert
++                  msg="Booth Level Updated"
++                  showConfirmBox={this.showConfirmBox}
++                  location={'/manage-constituency'}
++                />
++              ) : (
++                <ConstituencyAlert
++                  msg="Booth Level Created"
++                  showConfirmBox={this.showConfirmBox}
++                  location={'/add-constituency'}
++                />
++              )
++            ) : null}
+           </Fragment>
+-        }
++        )}
+       </Fragment>
+     )
+   }
+diff --git a/src/components/forms/complaint/Complaint.js b/src/components/forms/complaint/Complaint.js
+index ff254e2..30dbde8 100644
+--- a/src/components/forms/complaint/Complaint.js
++++ b/src/components/forms/complaint/Complaint.js
+@@ -232,6 +232,10 @@ class Complaint extends Component {
+         console.log(fileArray, 'selectedfiles')
+       })
+     } else {
++      this.setState(
++        { selectedfile: [] },
++        console.log('Selected files state', this.state.selectedfile)
++      )
+       toast.error('More than 5 Files are not Allowed', {
+         autoClose: 1250,
+         closeButton: false,
+@@ -330,74 +334,80 @@ class Complaint extends Component {
+ 
+     const { dd, mm, yy, byUser, orgId, id, typeOfRequest } = { ...complaint }
+ 
+-    const handleComplaintSubmit = (event) => {
++    const handleComplaintSubmit = async (event) => {
+       event.preventDefault()
+       if (status === 'ASSIGNED') {
+-        async function Main() {
+-          if (selectedfile) {
+-            for (let i = 0; i < selectedfile.length; i++) {
+-              selectedFilesFormData.append('files', selectedfile[i])
+-            }
++        if (selectedfile) {
++          for (let i = 0; i < selectedfile.length; i++) {
++            selectedFilesFormData.append('files', selectedfile[i])
++          }
+ 
+-            let toastID = this.toastID
++          let toastID = this.toastID
+ 
+-            await api.uploadFiles({ selectedFilesFormData, toastID }).then(
+-              (response) => {
+-                toast.done(this.toastID.current, {
++          await api.uploadFiles({ selectedFilesFormData, toastID }).then(
++            (response) => {
++              toast.done(this.toastID.current, {
++                autoClose: 1250,
++              })
++              if (response.ok) {
++                toast.success('File Uploaded Successfully!', {
+                   autoClose: 1250,
++                  closeButton: false,
+                 })
+-                if (response.ok) {
+-                  toast.success('File Uploaded Successfully!', {
++                console.log('sdf', response.data.data)
++                if (response.data.error) {
++                  toast.error('File Upload Error', {
+                     autoClose: 1250,
+                     closeButton: false,
+                   })
+-                  console.log('sdf', response.data.data)
++                } else {
+                   response.data.data.map((file, index) =>
+                     uploadedFileDetails.push({
+                       url: `https://node-test.fdpay.in/${file}`,
+                       name: file.substring(file.lastIndexOf('/') + 1),
+                     })
+                   )
+-                } else {
+-                  toast.error('File Upload Failed!', {
+-                    autoClose: 1250,
+-                    closeButton: false,
+-                  })
+-                  console.log('File submission error', response)
+                 }
+-              },
+-              (err) => {
++              } else {
+                 toast.error('File Upload Failed!', {
+                   autoClose: 1250,
+                   closeButton: false,
+                 })
+-                console.log('err', err)
++                console.log('File submission error', response)
+               }
+-            )
+-          }
+-          const requestData = {
+-            citizenName,
+-            citizenMobileNumber,
+-            citizenPincode,
+-            citizenAddress,
+-            recommendedName,
+-            recommendedNumber,
+-            description,
+-            location,
+-            important,
+-            attachments: uploadedFileDetails,
+-            status,
+-            comments,
+-            isWritable,
+-            followUp1,
+-            followUp2,
+-            assignedTo: pickedAddressee,
+-            department,
+-          }
++            },
++            (err) => {
++              toast.error('File Upload Failed!', {
++                autoClose: 1250,
++                closeButton: false,
++              })
++              console.log('err', err)
++            }
++          )
++        }
++        const requestData = {
++          citizenName,
++          citizenMobileNumber,
++          citizenPincode,
++          citizenAddress,
++          recommendedName,
++          recommendedNumber,
++          description,
++          location,
++          important,
++          attachments: uploadedFileDetails,
++          status,
++          comments,
++          isWritable,
++          followUp1,
++          followUp2,
++          assignedTo: pickedAddressee,
++          department,
++        }
+ 
+-          console.log('Request aa gayi', requestData)
++        console.log('Request aa gayi', requestData)
+ 
+-          /*let tempRequest = []
++        /*let tempRequest = []
+           let comt = requestData.comments
+           let count = 1
+           for( let i = 0; i <= 2000; i++ ) {
+@@ -440,47 +450,47 @@ class Complaint extends Component {
+             )
+           }*/
+ 
+-          api
+-            .createRequest({
+-              dd: `${date}`,
+-              mm: `${month}`,
+-              yy: `${year}`,
++        await api
++          .createRequest({
++            dd: `${date}`,
++            mm: `${month}`,
++            yy: `${year}`,
+ 
+-              typeOfRequest: 'COMPLAINT',
+-              status: 'ASSIGNED',
+-              request: requestData,
+-              addressee: {},
+-              citizen: citizen,
+-            })
+-            .then(
+-              (response) => {
+-                if (response.ok) {
+-                  console.log('Complait response', response)
+-                  toast.success('Request Created Successfully', {
+-                    autoClose: 1250,
+-                    closeButton: false,
+-                  })
+-                  history.push({
+-                    pathname: '/confirmation/complaint',
+-                    state: {
+-                      complaint: response.data.data,
+-                    },
+-                  })
+-                } else {
+-                  console.log('after after sdf')
+-                  toast.error('Request Creation Failed', {
+-                    autoClose: 1250,
+-                    closeButton: false,
+-                  })
+-                  console.log(response.data)
+-                }
+-              },
+-              (err) => {
+-                console.log('err ', err)
++            typeOfRequest: 'COMPLAINT',
++            status: 'ASSIGNED',
++            request: requestData,
++            addressee: {},
++            citizen: citizen,
++          })
++          .then(
++            (response) => {
++              console.log('Complaint response ok??', response)
++              if (response.ok) {
++                console.log('Complait response', response)
++                toast.success('Request Created Successfully', {
++                  autoClose: 1250,
++                  closeButton: false,
++                })
++                history.push({
++                  pathname: '/confirmation/complaint',
++                  state: {
++                    complaint: response.data.data,
++                  },
++                })
++              } else {
++                console.log('after after sdf')
++                toast.error('Request Creation Failed', {
++                  autoClose: 1250,
++                  closeButton: false,
++                })
++                history.goBack()
++                console.log(response.data)
+               }
+-            )
+-        }
+-        Main()
++            },
++            (err) => {
++              console.log('err ', err)
++            }
++          )
+       } else {
+         toast.error("The status must be 'ASSIGNED' in order to submit", {
+           autoClose: 1250,
+@@ -489,7 +499,7 @@ class Complaint extends Component {
+       }
+     }
+ 
+-    const handleComplaintUpdate = () => {
++    const handleComplaintUpdate = async () => {
+       console.log('Trying to update with ', this.state)
+       if (previousStatus === 'SOLVED') {
+         toast.error('Complaint already processed', {
+@@ -513,10 +523,9 @@ class Complaint extends Component {
+       console.log('two', this.toastID)
+ 
+       if (previousStatus === 'ASSIGNED') {
+-        console.log('three')
+-        var depart = this.state.department
++        console.log('three', this.toastID)
+         if (status === 'SOLVED' || status === 'ASSIGNED') {
+-          console.log('four')
++          console.log('four', this.toastID)
+           if (status === 'SOLVED' && !resolutiondate) {
+             toast.error('Please Add Resolution Date', {
+               autoClose: 1250,
+@@ -525,144 +534,143 @@ class Complaint extends Component {
+             return
+           }
+           var x = this.state.selectedfile
+-          console.log('hexa', x)
+-          async function Main() {
+-            let attachmentData = []
+-            Object.keys(x).forEach((value) => {
+-              if (x[value].hasOwnProperty('url')) {
+-                attachmentData.push({ ...x[value] })
+-              }
+-            })
+-            // debugger
+-            if (files) {
+-              console.log('files six')
+-              for (let i = 0; i < files.length; i++) {
+-                selectedFilesFormData.append('files', files[i])
+-              }
++          console.log('hexa', x, this.toastID)
++          console.log('async function mei')
++          let attachmentData = []
++          const files = []
++          Object.keys(x).forEach((value) => {
++            if (x[value].hasOwnProperty('url')) {
++              attachmentData.push({ ...x[value] })
++            } else {
++              files.push(x[value])
++            }
++          })
+ 
+-              console.log(files, 'lovish', this.toastID)
++          if (files) {
++            for (let i = 0; i < files.length; i++) {
++              selectedFilesFormData.append('files', files[i])
++            }
+ 
+-              let toastID = this.toastID
++            let toastID = this.toastID
+ 
+-              await api.uploadFiles({ selectedFilesFormData, toastID }).then(
+-                (response) => {
+-                  toast.done(this.toastID.current, {
++            await api.uploadFiles({ selectedFilesFormData, toastID }).then(
++              (response) => {
++                toast.done(this.toastID.current, {
++                  autoClose: 1250,
++                })
++                if (response.ok) {
++                  toast.success('File Uploaded Successfully!', {
+                     autoClose: 1250,
++                    closeButton: false,
+                   })
+-                  if (response.ok) {
+-                    toast.success('File Uploaded Successfully!', {
+-                      autoClose: 1250,
+-                      closeButton: false,
+-                    })
+-                    console.log('sdf', response.data.data, uploadedFileDetails)
+-                    response.data.data.map((file, index) =>
+-                      attachmentData.push({
+-                        url: `https://node-test.fdpay.in/${file}`,
+-                        name: file.substring(file.lastIndexOf('/') + 1),
+-                      })
+-                    )
+-                    // handleSetstate(updatedUploadedFileDetails)
+-                  } else {
+-                    console.log(response)
+-                    toast.error('File Upload Failed!', {
+-                      autoClose: 1250,
+-                      closeButton: false,
++                  console.log('sdf', response.data.data, uploadedFileDetails)
++                  response.data.data.map((file, index) =>
++                    attachmentData.push({
++                      url: `https://node-test.fdpay.in/${file}`,
++                      name: file.substring(file.lastIndexOf('/') + 1),
+                     })
+-                  }
+-                },
+-                (err) => {
++                  )
++                  // handleSetstate(updatedUploadedFileDetails)
++                } else {
++                  console.log(response)
+                   toast.error('File Upload Failed!', {
+                     autoClose: 1250,
+                     closeButton: false,
+                   })
+-                  console.log('err', err)
+                 }
+-              )
+-            }
+-            console.log('seven')
+-            if (!pickedAddressee && status === 'ASSIGNED') {
+-              toast.error('Please Add Addresee', {
+-                autoClose: 1250,
+-                closeButton: false,
+-              })
+-              return
+-            }
+-            if (status === 'SOLVED' && !resolutiondate) {
+-              toast.error('Please enter resolution date', {
+-                autoClose: 1250,
+-                closeButton: false,
+-              })
+-              return
+-            }
++              },
++              (err) => {
++                toast.error('File Upload Failed!', {
++                  autoClose: 1250,
++                  closeButton: false,
++                })
++                console.log('err', err)
++              }
++            )
++          } else {
++            console.log('if mei naii ghusa', files)
++          }
++          console.log('seven')
++          if (!pickedAddressee && status === 'ASSIGNED') {
++            toast.error('Please Add Addresee', {
++              autoClose: 1250,
++              closeButton: false,
++            })
++            return
++          }
++          if (status === 'SOLVED' && !resolutiondate) {
++            toast.error('Please enter resolution date', {
++              autoClose: 1250,
++              closeButton: false,
++            })
++            return
++          }
+ 
+-            console.log('eight')
+-            api
+-              .updateRequest({
+-                dd,
+-                mm,
+-                yy,
+-                typeOfRequest,
++          await api
++            .updateRequest({
++              dd,
++              mm,
++              yy,
++              typeOfRequest,
++              status,
++              byUser,
++              ref,
++              orgId,
++              id,
++              request: {
++                recommendedName: recommendedName,
++                recommendedNumber: recommendedNumber,
++                citizenName,
++                citizenMobileNumber,
++                citizenPincode,
++                citizenAddress,
++                description,
++                location,
++                important,
++                department,
++                attachments: attachmentData,
++                assignedTo: pickedAddressee,
+                 status,
+-                byUser,
+-                ref,
+-                orgId,
+-                id,
+-                request: {
+-                  recommendedName: recommendedName,
+-                  recommendedNumber: recommendedNumber,
+-                  citizenName,
+-                  citizenMobileNumber,
+-                  citizenPincode,
+-                  citizenAddress,
+-                  description,
+-                  location,
+-                  important,
+-                  department,
+-                  attachments: attachmentData,
+-                  assignedTo: pickedAddressee,
+-                  status,
+-                  resolutionDate: status === 'SOLVED' ? resolutiondate : null,
+-                  comments,
+-                  modifications: previousModifications,
+-                  isWritable,
+-                  followUp1,
+-                  followUp2,
+-                },
+-                addressee: { addresseName: pickedAddressee },
+-              })
+-              .then(
+-                (response) => {
+-                  if (response.ok) {
+-                    console.log('update complaint with', response)
+-                    toast.success('Request Updated Successfully', {
+-                      autoClose: 1250,
+-                      closeButton: false,
+-                    })
+-                    history.push({
+-                      pathname: '/confirmation/complaint',
+-                      state: {
+-                        complaint: response.data.data,
+-                      },
+-                      search: '?updated-complaint',
+-                    })
+-                  } else {
+-                    toast.error('Request Update Failed ', {
+-                      autoClose: 1250,
+-                      closeButton: false,
+-                    })
+-                    console.log('Some error ', response)
+-                  }
+-                },
+-                (err) => {
++                resolutionDate: status === 'SOLVED' ? resolutiondate : null,
++                comments,
++                modifications: previousModifications,
++                isWritable,
++                followUp1,
++                followUp2,
++              },
++              addressee: { addresseName: pickedAddressee },
++            })
++            .then(
++              (response) => {
++                if (response.ok) {
++                  console.log('update complaint with', response)
++                  toast.success('Request Updated Successfully', {
++                    autoClose: 1250,
++                    closeButton: false,
++                  })
++                  history.push({
++                    pathname: '/confirmation/complaint',
++                    state: {
++                      complaint: response.data.data,
++                    },
++                    search: '?updated-complaint',
++                  })
++                } else {
+                   toast.error('Request Update Failed ', {
+                     autoClose: 1250,
+                     closeButton: false,
+                   })
+-                  console.log('Error rejected', err)
++                  console.log('Some error ', response)
+                 }
+-              )
+-          }
+-          Main()
++              },
++              (err) => {
++                toast.error('Request Update Failed ', {
++                  autoClose: 1250,
++                  closeButton: false,
++                })
++                console.log('Error rejected', err)
++              }
++            )
+         }
+       }
+     }
+diff --git a/src/components/forms/event/Event.js b/src/components/forms/event/Event.js
+index c38225f..6f8236f 100644
+--- a/src/components/forms/event/Event.js
++++ b/src/components/forms/event/Event.js
+@@ -390,60 +390,59 @@ class Event extends Component {
+       attendeddate: attendeddate,
+     }
+ 
+-    const handleSubmit = (event) => {
++    const handleSubmit = async (event) => {
+       event.preventDefault()
+       console.log('trying to submit with ', this.state)
+       console.log('Show loader state is undefined', this.state.showLoader)
+       if (status === 'SCHEDULED' || status === 'DELEGATED') {
+-        async function Main() {
+-          let uploadedFileDetails = []
+-          if (selectedfile) {
+-            for (let i = 0; i < selectedfile.length; i++) {
+-              selectedFilesFormData.append('files', selectedfile[i])
+-            }
+-            console.log(selectedfile, 'hey there!')
++        let uploadedFileDetails = []
++        if (selectedfile) {
++          for (let i = 0; i < selectedfile.length; i++) {
++            selectedFilesFormData.append('files', selectedfile[i])
++          }
++          console.log(selectedfile, 'hey there!')
+ 
+-            let toastID = this.toastID
++          let toastID = this.toastID
+ 
+-            await api.uploadFiles({ selectedFilesFormData, toastID }).then(
+-              (response) => {
+-                toast.done(this.toastID.current, {
++          await api.uploadFiles({ selectedFilesFormData, toastID }).then(
++            (response) => {
++              toast.done(this.toastID.current, {
++                autoClose: 1250,
++              })
++              if (response.ok) {
++                toast.success('File Uploaded Successfully!', {
+                   autoClose: 1250,
++                  closeButton: false,
+                 })
+-                if (response.ok) {
+-                  toast.success('File Uploaded Successfully!', {
+-                    autoClose: 1250,
+-                    closeButton: false,
++                console.log('sdf', response.data.data)
++                response.data.data.map((file, index) =>
++                  uploadedFileDetails.push({
++                    url: `https://node-test.fdpay.in/${file}`,
++                    name: file.substring(file.lastIndexOf('/') + 1),
+                   })
+-                  console.log('sdf', response.data.data)
+-                  response.data.data.map((file, index) =>
+-                    uploadedFileDetails.push({
+-                      url: `https://node-test.fdpay.in/${file}`,
+-                      name: file.substring(file.lastIndexOf('/') + 1),
+-                    })
+-                  )
++                )
+ 
+-                  console.log(uploadedFileDetails, 'i am here')
+-                } else {
+-                  toast.error('File Upload Failed!', {
+-                    autoClose: 1250,
+-                    closeButton: false,
+-                  })
+-                  console.log(response)
+-                }
+-              },
+-              (err) => {
++                console.log(uploadedFileDetails, 'i am here')
++              } else {
+                 toast.error('File Upload Failed!', {
+                   autoClose: 1250,
+                   closeButton: false,
+                 })
+-                console.log('err', err)
++                console.log(response)
+               }
+-            )
+-          }
++            },
++            (err) => {
++              toast.error('File Upload Failed!', {
++                autoClose: 1250,
++                closeButton: false,
++              })
++              console.log('err', err)
++            }
++          )
++        }
+ 
+-          /////BULK IMPORT CODE//////
+-          /*let tempRequest = []
++        /////BULK IMPORT CODE//////
++        /*let tempRequest = []
+           let comt = requestData.comments
+           let count = 1
+ 
+@@ -489,49 +488,46 @@ class Event extends Component {
+             )
+           }*/
+ 
+-          api
+-            .createRequest({
+-              dd: `${date}`,
+-              mm: `${month}`,
+-              yy: `${year}`,
+-              meta: { orgName: organisation },
+-              typeOfRequest: 'EVENT',
+-              status: status,
+-              request: requestData,
+-              addressee: null,
+-              citizen: citizen,
+-            })
+-            .then(
+-              (response) => {
+-                if (response.ok) {
+-                  console.log('event response', response.data)
+-                  toast.success('Request Created Successfully !', {
+-                    autoClose: 1250,
+-                    closeButton: false,
+-                  })
+-                  history.push({
+-                    pathname: '/confirmation/event',
+-                    state: { event: response.data.data },
+-                  })
+-                } else {
+-                  toast.error('Request Failed !', {
+-                    autoClose: 1250,
+-                    closeButton: false,
+-                  })
+-                  console.log('event response', response.data)
+-                }
+-              },
+-              (err) => {
++        await api
++          .createRequest({
++            dd: `${date}`,
++            mm: `${month}`,
++            yy: `${year}`,
++            meta: { orgName: organisation },
++            typeOfRequest: 'EVENT',
++            status: status,
++            request: requestData,
++            addressee: null,
++            citizen: citizen,
++          })
++          .then(
++            (response) => {
++              if (response.ok) {
++                console.log('event response', response.data)
++                toast.success('Request Created Successfully !', {
++                  autoClose: 1250,
++                  closeButton: false,
++                })
++                history.push({
++                  pathname: '/confirmation/event',
++                  state: { event: response.data.data },
++                })
++              } else {
+                 toast.error('Request Failed !', {
+                   autoClose: 1250,
+                   closeButton: false,
+                 })
+-                console.log('err ', err)
++                console.log('event response', response.data)
+               }
+-            )
+-        }
+-
+-        Main()
++            },
++            (err) => {
++              toast.error('Request Failed !', {
++                autoClose: 1250,
++                closeButton: false,
++              })
++              console.log('err ', err)
++            }
++          )
+       } else {
+         toast.error("The status must be 'Pending' in order to submit", {
+           autoClose: 1250,
+diff --git a/src/components/forms/job/Job.js b/src/components/forms/job/Job.js
+index e1dd446..d976f81 100644
+--- a/src/components/forms/job/Job.js
++++ b/src/components/forms/job/Job.js
+@@ -378,56 +378,55 @@ class Job extends Component {
+       citizendata = job.citizen
+     }
+     const { dd, mm, yy, byUser, orgId, id, typeOfRequest } = { ...job }
+-    const handleSubmit = (event) => {
++    const handleSubmit = async (event) => {
+       event.preventDefault()
+-      async function Main() {
+-        if (selectedfile) {
+-          for (let i = 0; i < selectedfile.length; i++) {
+-            selectedFilesFormData.append('files', selectedfile[i])
+-          }
++      if (selectedfile) {
++        for (let i = 0; i < selectedfile.length; i++) {
++          selectedFilesFormData.append('files', selectedfile[i])
++        }
+ 
+-          let toastID = this.toastID
++        let toastID = this.toastID
+ 
+-          await api.uploadFiles({ selectedFilesFormData, toastID }).then(
+-            (response) => {
+-              toast.done(this.toastID.current, {
++        await api.uploadFiles({ selectedFilesFormData, toastID }).then(
++          (response) => {
++            toast.done(this.toastID.current, {
++              autoClose: 1250,
++            })
++            if (response.ok) {
++              toast.success('File Uploaded Successfully!', {
+                 autoClose: 1250,
++                closeButton: false,
+               })
+-              if (response.ok) {
+-                toast.success('File Uploaded Successfully!', {
+-                  autoClose: 1250,
+-                  closeButton: false,
++              console.log('sdf', response.data.data)
++              response.data.data.map((file, index) =>
++                uploadedFileDetails.push({
++                  url: `https://node-test.fdpay.in/${file}`,
++                  name: file.substring(file.lastIndexOf('/') + 1),
+                 })
+-                console.log('sdf', response.data.data)
+-                response.data.data.map((file, index) =>
+-                  uploadedFileDetails.push({
+-                    url: `https://node-test.fdpay.in/${file}`,
+-                    name: file.substring(file.lastIndexOf('/') + 1),
+-                  })
+-                )
+-                console.log(uploadedFileDetails, 'hello')
+-              } else {
+-                toast.error('File Upload Failed!', {
+-                  autoClose: 1250,
+-                  closeButton: false,
+-                })
+-                console.log(response)
+-              }
+-            },
+-            (err) => {
++              )
++              console.log(uploadedFileDetails, 'hello')
++            } else {
+               toast.error('File Upload Failed!', {
+                 autoClose: 1250,
+                 closeButton: false,
+               })
+-              console.log('err', err)
++              console.log(response)
+             }
+-          )
+-        }
++          },
++          (err) => {
++            toast.error('File Upload Failed!', {
++              autoClose: 1250,
++              closeButton: false,
++            })
++            console.log('err', err)
++          }
++        )
++      }
+ 
+-        console.log('value of selected adressee ', selectedaddresse)
++      console.log('value of selected adressee ', selectedaddresse)
+ 
+-        ///////BULK IMPORT CODE////
+-        /*let tempRequest = []
++      ///////BULK IMPORT CODE////
++      /*let tempRequest = []
+         let comt = requestData.comments
+         let count = 1
+ 
+@@ -472,44 +471,41 @@ class Job extends Component {
+           )
+         }*/
+ 
+-        api
+-          .createRequest({
+-            dd: `${currentdate}`,
+-            mm: `${month}`,
+-            yy: `${year}`,
++      await api
++        .createRequest({
++          dd: `${currentdate}`,
++          mm: `${month}`,
++          yy: `${year}`,
+ 
+-            typeOfRequest: 'JOB',
+-            status: 'SHARED',
+-            request: requestData,
+-            addressee: null,
+-            citizen: citizen,
+-          })
+-          .then(
+-            (response) => {
+-              if (response.ok) {
+-                console.log('jobs response', response.data)
+-                toast.success('Request Created', {
+-                  autoClose: 1250,
+-                  closeButton: false,
+-                })
+-                history.push({
+-                  pathname: '/confirmation/job',
+-                  state: { job: response.data.data },
+-                })
+-              } else {
+-                toast.error('An Internal Error Occurred!', {
+-                  autoClose: 1250,
+-                  closeButton: false,
+-                })
+-              }
+-            },
+-            (err) => {
+-              console.log('err ', err)
++          typeOfRequest: 'JOB',
++          status: 'SHARED',
++          request: requestData,
++          addressee: null,
++          citizen: citizen,
++        })
++        .then(
++          (response) => {
++            if (response.ok) {
++              console.log('jobs response', response.data)
++              toast.success('Request Created', {
++                autoClose: 1250,
++                closeButton: false,
++              })
++              history.push({
++                pathname: '/confirmation/job',
++                state: { job: response.data.data },
++              })
++            } else {
++              toast.error('An Internal Error Occurred!', {
++                autoClose: 1250,
++                closeButton: false,
++              })
+             }
+-          )
+-      }
+-
+-      Main()
++          },
++          (err) => {
++            console.log('err ', err)
++          }
++        )
+     }
+ 
+     const handleJobUpdate = async () => {
+diff --git a/src/components/forms/leters/letter.css b/src/components/forms/leters/letter.css
+index 6ca1009..ef6b4f3 100644
+--- a/src/components/forms/leters/letter.css
++++ b/src/components/forms/leters/letter.css
+@@ -10,7 +10,7 @@
+     margin-left: -1%;
+     overflow-y: hidden !important;
+     overflow-x: hidden !important;
+-    margin-top: -100px;
++    margin-top: -50px;
+   }
+   .datemove {
+     position: absolute;
+@@ -20,15 +20,16 @@
+     margin-top: 100px;
+     margin-left: -15px;
+   }
+-  #content {
+-    margin-left: 70px;
+-    width: 950px !important;
++  #content1 {
++    width: 850px !important;
+     font-size: 17pt !important;
+     display: block;
+     min-height: 500px;
+     max-height: auto;
+     word-wrap: break-word !important;
+     margin-top: 3px;
++    margin-left: 70px !important;
++    margin-right: 70px !important;
+   }
+   #DivID {
+     margin-left: -150px;
+@@ -54,7 +55,6 @@
+ 
+   .letter-display {
+     width: 1500px !important;
+-    height: 29.7cm;
+     border-radius: 20px;
+   }
+   .HeaderFrame {
+@@ -66,6 +66,13 @@
+   .printable {
+     display: block;
+   }
++  .contentDiv {
++    display: block;
++  }
++}
++
++.contentDiv {
++  display: none;
+ }
+ 
+ .letter-content {
+@@ -89,7 +96,6 @@
+   margin-top: -4px;
+ }
+ .letter-content-text {
+-  height: 118.322mm;
+   font-size: 12px;
+   text-align: justify;
+   white-space: pre-wrap;
+@@ -99,7 +105,6 @@
+ }
+ .letter-content-input {
+   border: none;
+-  height: 118.322mm;
+   font-size: 12px;
+   resize: none;
+   overflow: visible;
+@@ -131,7 +136,6 @@
+ }
+ .letter-display {
+   background: rgb(255, 255, 255);
+-  height: 29.7cm;
+   border-radius: 20px;
+ }
+ 
+diff --git a/src/components/forms/leters/letter.js b/src/components/forms/leters/letter.js
+index dec5eb8..71846fb 100644
+--- a/src/components/forms/leters/letter.js
++++ b/src/components/forms/leters/letter.js
+@@ -314,42 +314,41 @@ class Letters extends Component {
+     }
+     const { dd, mm, yy, byUser, orgId, id, typeOfRequest } = { ...Letters }
+ 
+-    const handleSubmit = () => {
+-      async function Main() {
+-        if (selectedfile.length > 0) {
+-          for (let i = 0; i < selectedfile.length; i++) {
+-            selectedFilesFormData.append('files', selectedfile[i])
+-          }
++    const handleSubmit = async () => {
++      if (selectedfile.length > 0) {
++        for (let i = 0; i < selectedfile.length; i++) {
++          selectedFilesFormData.append('files', selectedfile[i])
++        }
+ 
+-          let toastID = this.toastID
++        let toastID = this.toastID
+ 
+-          await api.uploadFiles({ selectedFilesFormData, toastID }).then(
+-            (response) => {
+-              toast.done(this.toastID.current, {
+-                autoClose: 1250,
+-              })
+-              if (response.ok) {
+-                console.log('sdf', response.data.data)
+-                response.data.data.map((file, index) =>
+-                  uploadedFileDetails.push({
+-                    url: `https://node-test.fdpay.in/${file}`,
+-                    name: file.substring(file.lastIndexOf('/') + 1),
+-                  })
+-                )
+-                toast.success('File Uploaded Successfully!')
+-              } else {
+-                toast.error('File Upload Failed!')
+-                console.log(response)
+-              }
+-            },
+-            (err) => {
++        await api.uploadFiles({ selectedFilesFormData, toastID }).then(
++          (response) => {
++            toast.done(this.toastID.current, {
++              autoClose: 1250,
++            })
++            if (response.ok) {
++              console.log('sdf', response.data.data)
++              response.data.data.map((file, index) =>
++                uploadedFileDetails.push({
++                  url: `https://node-test.fdpay.in/${file}`,
++                  name: file.substring(file.lastIndexOf('/') + 1),
++                })
++              )
++              toast.success('File Uploaded Successfully!')
++            } else {
+               toast.error('File Upload Failed!')
++              console.log(response)
+             }
+-          )
+-        }
++          },
++          (err) => {
++            toast.error('File Upload Failed!')
++          }
++        )
++      }
+ 
+-        //////BULK IMPORT CODE/////
+-        /*let tempRequest = []
++      //////BULK IMPORT CODE/////
++      /*let tempRequest = []
+         let comt = requestData.comments
+         let count = 1
+  
+@@ -398,47 +397,45 @@ class Letters extends Component {
+           )
+         }*/
+ 
+-        api
+-          .createRequest({
+-            dd: `${currentdate}`,
+-            mm: `${month}`,
+-            yy: `${year}`,
++      await api
++        .createRequest({
++          dd: `${currentdate}`,
++          mm: `${month}`,
++          yy: `${year}`,
+ 
+-            typeOfRequest: 'LETTERS',
+-            status: 'VERYIMPORTANT',
+-            request: requestData,
+-            addressee: null,
+-            citizen: citizendata,
+-          })
+-          .then(
+-            (response) => {
+-              if (response.ok) {
+-                console.log('Letter responnse', response.data)
+-                console.log(response.data, 'xxx')
+-                setRef(response.data.data.ref)
+-                toast.success('letter added Successfully!')
+-                // history.push({
+-                //   pathname: '/confirmation/letter',
+-                //   state: { Letters: response.data.data },
+-                //   search: '?show-letter',
+-                // })
+-                // history.push({
+-                //   path: '/manage-request',
+-                //   state: {
+-                //     manage: 'LETTERS',
+-                //   },
+-                // })
+-              } else {
+-                alert('Error occured')
+-                console.log(response.data)
+-              }
+-            },
+-            (err) => {
+-              console.log('err ', err)
++          typeOfRequest: 'LETTERS',
++          status: 'VERYIMPORTANT',
++          request: requestData,
++          addressee: null,
++          citizen: citizendata,
++        })
++        .then(
++          (response) => {
++            if (response.ok) {
++              console.log('Letter responnse', response.data)
++              console.log(response.data, 'xxx')
++              setRef(response.data.data.ref)
++              toast.success('letter added Successfully!')
++              // history.push({
++              //   pathname: '/confirmation/letter',
++              //   state: { Letters: response.data.data },
++              //   search: '?show-letter',
++              // })
++              // history.push({
++              //   path: '/manage-request',
++              //   state: {
++              //     manage: 'LETTERS',
++              //   },
++              // })
++            } else {
++              alert('Error occured')
++              console.log(response.data)
+             }
+-          )
+-      }
+-      Main()
++          },
++          (err) => {
++            console.log('err ', err)
++          }
++        )
+     }
+ 
+     const handleLettersUpdate = async () => {
+@@ -1097,10 +1094,10 @@ class Letters extends Component {
+                           {this.state.content}
+                         </p>
+                       ) : (
+-                        <div class="col">
++                        <div className="col">
+                           <textarea
+                             type="text"
+-                            id="content"
++                            id="content1 non-printable"
+                             placeholder="Enter your content"
+                             className="letter-content-input"
+                             maxLength={20000}
+@@ -1109,6 +1106,7 @@ class Letters extends Component {
+                               this.setState({ content: e.target.value })
+                             }
+                           />
++                          <div className="contentDiv">{this.state.content}</div>
+                         </div>
+                       )}
+                     </Row>
+@@ -1177,13 +1175,13 @@ class Letters extends Component {
+       // var count = lines.length;
+       //     var height=count*20000;
+       document
+-        .getElementById('content')
++        .getElementById('content1')
+         .setAttribute('style', 'min-height:450px')
+-      var divdata = document.getElementById('content').value
++      var divdata = document.getElementById('content1').value
+       //var data= document.getElementById("content");
+       // txtArea.value +=  text + '\r\n';
+-      document.getElementById('content').value +=
+-        '\r\nYour Sincerely,\r\n(Anurag Thakur)'
++      //document.getElementById('content1').value +=
++      //'\r\nYour Sincerely,\r\n(Anurag Thakur)'
+       setTimeout(function () {
+         window.print()
+       }, 1000)

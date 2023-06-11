@@ -1,0 +1,13 @@
+.requestRow {
+  border-top: 0.5px solid #acadb2;
+  padding: 15px 0;
+}
+
+.constituencyFrame {
+  height: 40vh;
+  overflow: auto;
+}
+
+.constituencyFrame::-webkit-scrollbar {
+  display: none;
+}

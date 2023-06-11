@@ -1,0 +1,294 @@
+.Backgroundframe {
+  background-color: #f2f2fc;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.emptyDiv {
+  height: 50px;
+}
+.frame {
+  width: 880px;
+  margin-left: auto;
+  border-radius: 15px 15px 10px 10px;
+  margin-right: auto;
+  padding-top: 50px;
+}
+.Letterframe {
+  width: 30%;
+  border-radius: 15px 15px 10px 10px;
+  padding-top: 50px;
+  height: 74vh;
+}
+.previewFrame {
+  width: 30%;
+  border-radius: 15px 15px 10px 10px;
+  margin-left: 10px;
+  height: 30vh;
+  margin: 100px 0px 0px 10px;
+}
+.TextareaLayoutLetter {
+  border-radius: 3px;
+  width: 99%;
+  font-size: 14px;
+  align-self: center;
+  padding: 20px 30px;
+  font-family: Segoe UI;
+  font-weight: 500;
+  box-sizing: border-box;
+  color: #000000;
+  background: #fff;
+  line-height: 22px;
+  border: 0px;
+  padding: 0px 25px 0px 21px;
+  margin-bottom: 0px;
+}
+
+.Loginframe {
+  display: flex;
+
+  width: -webkit-fill-available;
+}
+.Leftframe {
+  position: relative;
+  background: #2f2d64 0 0 no-repeat padding-box;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+  border-radius: 20px 0 0 20px;
+  width: 50%;
+  height: 500px;
+}
+.Rightframe {
+  position: relative;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 3px #00000029;
+  border-radius: 0px 20px 20px 0px;
+  width: 50%;
+  height: 500px;
+}
+.RightFrameForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 100%;
+}
+.LeftFrameData {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+.ImgEsahyogi {
+  width: 180px;
+}
+.TxtWelcomeLogin {
+  font-family: Segoe UI;
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+}
+.TxtPhoneno {
+  width: 60%;
+  font-family: Segoe UI;
+  font-weight: 600;
+  font-size: 13px;
+  text-align: left;
+  color: #2f2d64;
+  margin-left: 20%;
+  margin-bottom: 5px;
+}
+.InputPhoneno {
+  -moz-appearance: textfield;
+  width: 60%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #2f2d64;
+  border-radius: 3px;
+  font-size: 15px;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+.BtnLogin {
+  width: 30%;
+  background: #2f2d64 0% 0% no-repeat padding-box;
+  border-radius: 30px;
+  color: #ffffff;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0px;
+}
+
+.BtnLogin:focus {
+  outline: none;
+}
+
+.anchor {
+  color: #2f2d64;
+  font-size: 16px;
+  font-family: Segoe UI;
+  font-weight: 500;
+  text-decoration: none;
+}
+.anchor:hover {
+  color: #2f2d64;
+  font-weight: 700;
+  text-decoration: none;
+}
+.TxtWelcomeMobile {
+  width: 55%;
+  font-size: 15px;
+  text-align: center;
+  color: #2f2d64;
+  margin-left: 22%;
+  margin-top: 10%;
+  margin-bottom: 8%;
+}
+@media screen and (max-width: 480px) {
+  .Backgroundframe {
+    background-color: #f2f2fc;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 5vh;
+  }
+  .LoginframeBackground {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 50px;
+    width: 80vw;
+  }
+  .Loginframe {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+  }
+  .Leftframe {
+    background: #2f2d64 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 3px #00000029;
+    border-radius: 10px 10px 0px 0px;
+    height: 43vh;
+    width: 80vw;
+  }
+  .Rightframe {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 3px #00000029;
+    border-radius: 0px 0px 10px 10px;
+    height: 43vh;
+    width: 80vw;
+  }
+  .ImgEsahyogi {
+    margin-top: 50%;
+    width: 120px;
+  }
+  .TxtWelcomeMobile {
+    width: 60%;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    font-family: Segoe UI;
+    color: #2f2d64;
+    margin-left: 22%;
+    margin-top: 10%;
+    margin-bottom: 8%;
+  }
+  .TxtPhoneno {
+    width: 70%;
+    font-size: 13px;
+    text-align: left;
+    color: #2f2d64;
+    margin-left: 15%;
+    margin-bottom: 0px;
+  }
+  .InputPhoneno {
+    width: 70%;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #2f2d64;
+    border-radius: 3px;
+    font-size: 13px;
+    height: 30px;
+  }
+
+  .TxtHelp {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #2f2d64 !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .BtnLogin {
+    width: 30%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background: #2f2d64 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    color: #ffffff;
+    height: 30px;
+    font-size: 13px;
+  }
+  a {
+    color: #2f2d64;
+    text-decoration: none;
+  }
+  .anchor {
+    font-size: 11px;
+    font-family: Segoe UI;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .anchor:hover {
+    color: #2f2d64;
+    font-size: 11px;
+    font-family: Segoe UI;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+.loginEyeIcon {
+  position: absolute;
+  bottom: 22%;
+  right: 22%;
+}
+
+.eye-button {
+  position: fixed;
+  height: 13px;
+  overflow: overlay;
+  cursor: pointer;
+  left: 320px;
+  top: 122px;
+}
+.invisible-button {
+  position: fixed;
+  height: 13px;
+  overflow: overlay;
+  cursor: pointer;
+  left: 320px;
+  top: 122px;
+}
+
+/* improved css */
+
+input.InputPhoneno:focus {
+  outline: none;
+}
+
+.switchLogin {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  color: #e92424;
+  font-size: 11px;
+  font-family: Segoe UI;
+  transition: all 0.5s;
+  font-weight: 600;
+}
+
+.switchLogin:hover {
+  text-decoration: #ff0000;
+}

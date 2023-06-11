@@ -1,0 +1,54 @@
+.myAlert {
+  display: inline-block;
+  margin: 0 auto;
+  width: 400px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 45px 0;
+  box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+.alertHeader {
+  display: inline-block;
+  font-family: Segoe UI;
+  font-weight: 700;
+  color: #2f2d64;
+  font-size: 22px;
+  letter-spacing: 1px;
+  vertical-align: middle;
+}
+
+.alertMsg {
+  font-family: Segoe UI;
+  letter-spacing: 1px;
+  padding: 15px 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: #2f2d64;
+}
+
+.alertMsg p {
+  margin-bottom: 5px;
+}
+
+.alertTick {
+  width: 50px;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.alertBtw {
+  border: none;
+  border-radius: 6px;
+  padding: 7px 15px;
+  background-color: #2f2d64;
+  font-family: Segoe UI;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  width: 150px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}

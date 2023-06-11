@@ -1,0 +1,132 @@
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  .outerfram {
+    position: relative;
+    width: 80% !important;
+    margin: 0 auto;
+  }
+  .letter-content-input {
+    display: none !important;
+  }
+  .datemove {
+    position: relative;
+    padding: 0 0 !important;
+  }
+  .subjecttxt {
+    font-size: 13pt !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .subjectpdf {
+    margin-left: -50px;
+    padding: 0 !important;
+  }
+  .TxtConfirmation {
+    margin-left: 150px;
+    font-size: 17pt !important;
+  }
+  .HeaderFrame,
+  .non-printable {
+    display: none;
+  }
+  .printable {
+    display: block;
+  }
+  .contentDiv {
+    display: block !important;
+    font-size: 17px;
+    text-align: justify;
+    margin-top: -40px;
+  }
+  .letter-content {
+    margin: -100px 0 0 0 !important;
+    padding: 0 !important;
+  }
+  .signature-block {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .signature-block .sincerelyDiv {
+    margin-top: -100px !important;
+  }
+  .letter-to {
+    margin-top: -75px;
+    padding: 0 !important;
+  }
+}
+.outerfram {
+  width: 57%;
+  overflow-y: auto;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.contentDiv {
+  display: none;
+}
+.letter-content {
+  font-size: 12px;
+  margin: 0 40px;
+}
+.subjecttxt {
+  font-size: 13pt !important;
+}
+#subject {
+  font-size: 14pt !important;
+}
+.letter-content-text {
+  position: relative;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  overflow: auto;
+}
+.letter-content-input,
+.letter-content-text {
+  font-size: 12px;
+  text-align: justify;
+  width: 100%;
+}
+.letter-content-input {
+  border: none;
+  resize: none;
+  overflow: visible;
+  height: 350px;
+  padding: 0 20px;
+}
+.signature-block {
+  padding: 0 60px;
+  margin-top: 20px;
+}
+.digital-signature {
+  width: 100px;
+  margin-bottom: 0;
+  margin-top: -10px;
+}
+.form-Heading {
+  display: flex;
+  background: hsla(0, 0%, 100%, 0.8) 0 0 no-repeat padding-box;
+  box-shadow: 0 3px 6px #d3d7db;
+  border-radius: 15px 15px 0 0;
+  height: 75px;
+  padding: 0 40px;
+  align-items: center;
+}
+.form-block {
+  padding-right: 0 !important;
+  padding-left: 30px !important;
+  border-radius: 15px 15px 10px 10px;
+}
+.letter-display {
+  background: #fff;
+  border-radius: 20px;
+}
+.letter-to {
+  font-size: 12px;
+  text-align: left;
+  padding-left: 60px;
+}
+.datemove {
+  padding: 0 65px;
+}
